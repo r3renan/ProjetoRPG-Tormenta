@@ -9,7 +9,7 @@ public class DB_Racas {
         
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:rpg.db");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
             System.out.println("Banco de dados acessado com sucesso");
             
             s = c.createStatement();

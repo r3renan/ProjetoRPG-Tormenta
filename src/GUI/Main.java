@@ -6,10 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import static programa.Inicializacao.inicializacao;
+
 public class Main extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        inicializacao();
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);

@@ -9,7 +9,7 @@ public class GerarDatabase {
       
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:rpg.db");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
             c.close();
             
         } catch ( Exception e ) {

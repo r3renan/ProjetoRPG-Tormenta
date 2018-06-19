@@ -9,7 +9,7 @@ public class DB_Fichas {
       
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:rpg.db");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
             System.out.println("Banco de dados acessado com sucesso");
             
             s = c.createStatement();
@@ -19,6 +19,7 @@ public class DB_Fichas {
                             "FOREIGN KEY(ID_RACA) REFERENCES RACAS(ID)," +
                             "ID_CLASSE INT," +
                             "NOME TEXT NOT NULL," +
+                            "NIVEL INTEGER NOT NULL," +
                             "FORCA INT," +
                             "DESTREZA INT," +
                             "CONSTITUICAO INT," +
