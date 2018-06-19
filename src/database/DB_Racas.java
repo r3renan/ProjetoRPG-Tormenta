@@ -13,8 +13,8 @@ public class DB_Racas {
             System.out.println("Banco de dados acessado com sucesso");
             
             s = c.createStatement();
-            String sql = "CREATE TABLE RACAS"
-                    + "(ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+            String sql = "CREATE TABLE RACAS ("
+                    + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "NOME TEXT NOT NULL,"
                     + "AJ_FORCA INT,"
                     + "AJ_DESTREZA INT,"

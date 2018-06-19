@@ -16,9 +16,15 @@ public class DB_Classes {
             
             s = c.createStatement();
             
-            String sql = "CREATE TABLE classes("
-                    + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
-                    + ")";
+            String sql = "CREATE TABLE CLASSES ("
+                    + "ID INTEGER PRIMARY KEY AUTOINCREMENT)";
+            
+            s.executeUpdate(sql);
+            
+            s.close();
+            c.close();
+            
+            System.out.println("Tabela temporaria CLASSES gerada com sucesso.");
             
             
         } catch(Exception e){

@@ -15,8 +15,8 @@ public class DB_Magias {
 
             s = c.createStatement();
 
-            String sql = "CREATE TABLE MAGIAS" +
-                            "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+            String sql = "CREATE TABLE MAGIAS (" +
+                            "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "NOME TEXT NOT NULL," +
                             "NIVEL TEXT NOT NULL," +
                             "TEMPO DE EXECUÇÃO TEXT," +

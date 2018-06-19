@@ -13,19 +13,21 @@ public class DB_Fichas {
             System.out.println("Banco de dados acessado com sucesso");
             
             s = c.createStatement();
-            String sql = "CREATE TABLE FICHAS" +
-                            "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                            "ID_RACA INT," +
-                            "FOREIGN KEY(ID_RACA) REFERENCES RACAS(ID)," +
-                            "ID_CLASSE INT," +
+            String sql = "CREATE TABLE FICHAS (" +
+                            "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                            "ID_RACA INTEGER," +
+                            "ID_CLASSE INTEGER," +
                             "NOME TEXT NOT NULL," +
                             "NIVEL INTEGER NOT NULL," +
-                            "FORCA INT," +
-                            "DESTREZA INT," +
-                            "CONSTITUICAO INT," +
-                            "SABEDORIA INT," +
-                            "INTELIGENCIA INT," +
-                            "CARISMA INT)";
+                            "FORCA INTEGER," +
+                            "DESTREZA INTEGER," +
+                            "CONSTITUICAO INTEGER," +
+                            "SABEDORIA INTEGER," +
+                            "INTELIGENCIA INTEGER," +
+                            "CARISMA INTEGER," +
+                            "FOREIGN KEY(ID_RACA) REFERENCES RACAS(ID)," +
+                            "FOREIGN KEY(ID_CLASSE) REFERENCES CLASSES(ID)" +
+                            ")";
             
             s.executeUpdate(sql);
             s.close();
