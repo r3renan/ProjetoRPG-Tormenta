@@ -1,0 +1,5 @@
+package parser;
+
+public class ParserJSON { //ATRIBUTOS: NOME, NIVEL, TEMPO DE EXECUÇÃO, ALCANCE, ALVOS, DURAÇÃO, TESTE DE RESISTENCIA, FONTE, DESCRIÇÃO
+    
+}
