@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import parser.ParserJSON;
 
 public class TelaInicialController implements Initializable {
     
@@ -20,6 +21,15 @@ public class TelaInicialController implements Initializable {
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaCriarFicha.fxml"));
         sceneAtual.setRoot(loader.load());
+    }
+    
+    @FXML
+    private void consultaDB(ActionEvent event){
+        try{
+            ParserJSON.cadastrarMagias();
+        } catch(Exception e){
+            System.err.print(e.getClass().getName() + ": " + e.getMessage());
+        }
     }
     
     @Override
