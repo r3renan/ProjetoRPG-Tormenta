@@ -1,5 +1,5 @@
-{
-  "nome": "Abençoar Agua",
+[{
+  "nome": "Abençoar Água",
   "nivel": "divina 1 (cura)",
   "tempoExecucao": "1 minuto",
   "alcance": "toque",
@@ -6113,4 +6113,4 @@
   "testeResistencia": "Vontade anula",
   "fonte": "Módulo Básico 209, Módulo Básico Edição Revisada 219.",
   "descricao": "Criaturas na área desta magia não podem mentir deliberadamente. As criaturas estão cientes do encantamento, então podem tentar evitar perguntas que normalmente responderiam com uma mentira (sendo evasivas, por exemplo)."
-}
+}]

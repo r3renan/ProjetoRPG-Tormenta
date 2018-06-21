@@ -43,7 +43,6 @@ public class DB_Magias {
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            return;
         }
     }
     

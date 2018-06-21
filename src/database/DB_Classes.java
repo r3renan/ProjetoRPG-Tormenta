@@ -33,7 +33,6 @@ public class DB_Classes {
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            return;
         }
     }
 }

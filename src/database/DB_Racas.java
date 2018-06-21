@@ -38,7 +38,6 @@ public class DB_Racas {
             
         } catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            return;
         }
     }
 }

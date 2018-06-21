@@ -42,7 +42,6 @@ public class DB_Fichas {
             
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            return;
         }
     }
 }
