@@ -83,7 +83,12 @@ public class DB_Magias {
         
         try{
             Statement s = c.createStatement();
+            ResultSet result = s.executeQuery(sql);
             
+            while(result.next()){
+                System.out.println("ID: " + result.getInt("ID") + "\t" +
+                                    result.getString("NOME") + "\t");
+            }
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
