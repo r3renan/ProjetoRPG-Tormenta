@@ -101,7 +101,7 @@
                            </font>
                         </Label>
                         <TextField GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="campoForca" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
