@@ -19,11 +19,12 @@ public class DB_Magias {
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "NOME TEXT NOT NULL," +
                             "NIVEL TEXT NOT NULL," +
-                            "TEMPO DE EXECUÇÃO TEXT," +
+                            "TEMPO_EXECUÇÃO TEXT," +
                             "ALCANCE TEXT," +
+                            "EFEITO TEXT," +
                             "ALVO TEXT," +
                             "DURACAO TEXT," +
-                            "TESTE_DE_RESISTENCIA TEXT," +
+                            "TESTE_RESISTENCIA TEXT," +
                             "FONTE TEXT," +
                             "DESCRICAO TEXT)";
             
