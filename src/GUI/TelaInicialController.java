@@ -19,7 +19,7 @@ public class TelaInicialController implements Initializable {
     private void telaCriarFicha(ActionEvent event) throws Exception {
         Scene sceneAtual = btnCriarFicha.getScene();
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaCriarFicha.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
         sceneAtual.setRoot(loader.load());
     }
     
