@@ -46,9 +46,7 @@ public class TelaCriarFichaController implements Initializable {
         ArrayList<Integer> rolagens = new ArrayList<>();
         int resultado = 0;
         
-        for (int i = 0; i < 4; i++){
-            rolagens.add(random.nextInt(6) + 1);
-        }
+        for (int i = 0; i < 4; i++){ rolagens.add(random.nextInt(6) + 1); }
         
         int menor = Collections.min(rolagens);
         for (int x : rolagens){ resultado += x; }
@@ -60,9 +58,7 @@ public class TelaCriarFichaController implements Initializable {
     
     @FXML
     public void prosseguir() throws Exception{
-        String valor;
-        valor = campoNome.getText();
-        System.out.println("Valor: " + valor);
+        
         /*Scene scene = btnNext.getScene();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaNext.fxml"));
         
