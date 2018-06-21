@@ -3,17 +3,21 @@ package database;
 import java.sql.*;
 
 public class DB_Racas {
-    public static void gerarTableRacas(){
+    private static Connection connect(){
         Connection c = null;
-        Statement s = null;
-        
         try {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-            System.out.println("Banco de dados acessado com sucesso");
-            
-            s = c.createStatement();
-            String sql = "CREATE TABLE RACAS ("
+        } catch (Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        return c;
+    }
+    
+    public static void gerarTableRacas(){
+        Connection c = connect();
+        String sql = "CREATE TABLE RACAS ("
                     + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "NOME TEXT NOT NULL,"
                     + "AJ_FORCA INT,"
@@ -24,16 +28,17 @@ public class DB_Racas {
                     + "AJ_CARISMA INT,"
                     + "AJ_DISTRIBUTIVO INT,"
                     + "QUANT_STATUS INT)";
-            
+        
+        try {
+            Statement s = c.createStatement();
             s.executeUpdate(sql);
             s.close();
             c.close();
+            System.out.println("Tabela RACAS gerada com sucesso.");
             
         } catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             return;
         }
-        
-        System.out.println("Tabela RACAS gerada com sucesso.");
     }
 }

@@ -5,18 +5,23 @@ import parser.Magia;
 
 
 public class DB_Magias {
-    public static void gerarTableMagias(){ //ATRIBUTOS: NOME, NIVEL, TEMPO DE EXECUÇÃO, ALCANCE, ALVOS, DURAÇÃO, TESTE DE RESISTENCIA, FONTE, DESCRIÇÃO
+    
+    private static Connection connect(){
         Connection c = null;
-        Statement s = null;
-        
-        try{
+        try {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-            System.out.println("Banco de dados acessado com sucesso");
-
-            s = c.createStatement();
-
-            String sql = "CREATE TABLE MAGIAS (" +
+        } catch (Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        return c;
+    }
+    
+    public static void gerarTableMagias(){ //ATRIBUTOS: NOME, NIVEL, TEMPO DE EXECUÇÃO, ALCANCE, ALVOS, DURAÇÃO, TESTE DE RESISTENCIA, FONTE, DESCRIÇÃO
+        Connection c = connect();
+        
+        String sql = "CREATE TABLE MAGIAS (" +
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "NOME TEXT NOT NULL," +
                             "NIVEL TEXT NOT NULL," +
@@ -28,31 +33,24 @@ public class DB_Magias {
                             "TESTE_RESISTENCIA TEXT," +
                             "FONTE TEXT," +
                             "DESCRICAO TEXT)";
-            
+        
+        try {
+            Statement s = c.createStatement();
             s.executeUpdate(sql);
             s.close();
             c.close();
+            System.out.println("Tabela MAGIAS gerada com sucesso.");
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             return;
         }
-        
-        System.out.println("Tabela MAGIAS gerada com sucesso.");
-        
     }
     
     public static void inserirMagia(Magia magia){ //TODO
-        try{
-            Connection c = null;
-            Statement s = null;
+        Connection c = connect();
         
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-        
-            s = c.createStatement();
-        
-            String sql = "INSERT INTO MAGIAS VALUES("
+        String sql = "INSERT INTO MAGIAS VALUES("
                     + "NULL,"
                     + "\"" + magia.getNome() + "\","
                     + "\"" + magia.getNivel() + "\","
@@ -64,7 +62,9 @@ public class DB_Magias {
                     + "\"" + magia.getTesteResistencia() + "\","
                     + "\"" + magia.getFonte() + "\","
                     + "\"" + magia.getDescricao() + "\")";
-            
+        
+        try{
+            Statement s = c.createStatement();            
             s.executeUpdate(sql);
             s.close();
             c.close();
@@ -77,16 +77,13 @@ public class DB_Magias {
     }
     
     public static void consultarMagia(){
-        Connection c = null;
-        Statement s = null;
+        Connection c = connect();
+        
+        String sql = "SELECT * FROM MAGIAS";
         
         try{
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
+            Statement s = c.createStatement();
             
-            s = c.createStatement();
-            
-            String sql = "SELECT * FROM MAGIAS";
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
