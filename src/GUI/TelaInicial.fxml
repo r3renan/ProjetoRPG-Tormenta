@@ -4,13 +4,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TelaInicialController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TelaInicialController">
    <children>
       <Pane layoutX="33.0" layoutY="20.0" prefHeight="271.0" prefWidth="401.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="100.0" layoutY="90.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="CRIAR FICHA" />
-            <Button layoutX="100.0" layoutY="270.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="CARREGAR FICHA" />
-            <Button layoutX="370.0" layoutY="90.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="CONSULTAR DATABASE" />
+            <Button fx:id="btnCriarFicha" layoutX="100.0" layoutY="90.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" onAction="#telaCriarFicha" text="CRIAR FICHA" />
+            <Button fx:id="btnCarregarFicha" layoutX="100.0" layoutY="270.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="CARREGAR FICHA" />
+            <Button fx:id="btnConsultDB" layoutX="370.0" layoutY="90.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="CONSULTAR DATABASE" />
             <Button layoutX="370.0" layoutY="270.0" minHeight="50.0" minWidth="130.0" mnemonicParsing="false" text="INSERIR FUNCAO AQ" />
          </children>
       </Pane>
