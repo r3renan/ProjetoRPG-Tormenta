@@ -1,6 +1,7 @@
 package database;
 
 import java.sql.*;
+import parser.Magia;
 
 
 public class DB_Magias {
@@ -41,7 +42,36 @@ public class DB_Magias {
         
     }
     
-    public static void inserirMagia(String NOME){ //TODO
+    public static void inserirMagia(Magia magia){ //TODO
+        try{
+            Connection c = null;
+            Statement s = null;
         
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
+        
+            s = c.createStatement();
+        
+            String sql = "INSERT INTO MAGIAS VALUES("
+                    + "\"" + magia.getNome() + "\","
+                    + "\"" + magia.getNivel() + "\","
+                    + "\"" + magia.getTempoExecucao() + "\","
+                    + "\"" + magia.getAlcance() + "\","
+                    + "\"" + magia.getEfeito() + "\","
+                    + "\"" + magia.getAlvo() + "\","
+                    + "\"" + magia.getDuracao() + "\","
+                    + "\"" + magia.getTesteResistencia() + "\","
+                    + "\"" + magia.getFonte() + "\","
+                    + "\"" + magia.getDescricao() + "\")";
+            
+            s.executeUpdate(sql);
+            s.close();
+            c.close();
+            
+            System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
+                    
+        } catch (Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
     }            
 }
