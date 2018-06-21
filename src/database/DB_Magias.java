@@ -53,6 +53,7 @@ public class DB_Magias {
             s = c.createStatement();
         
             String sql = "INSERT INTO MAGIAS VALUES("
+                    + "NULL,"
                     + "\"" + magia.getNome() + "\","
                     + "\"" + magia.getNivel() + "\","
                     + "\"" + magia.getTempoExecucao() + "\","
@@ -73,5 +74,22 @@ public class DB_Magias {
         } catch (Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
-    }            
+    }
+    
+    public static void consultarMagia(){
+        Connection c = null;
+        Statement s = null;
+        
+        try{
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
+            
+            s = c.createStatement();
+            
+            String sql = "SELECT * FROM MAGIAS";
+            
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+    }
 }
