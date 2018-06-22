@@ -1,6 +1,7 @@
 package database;
 
 import java.sql.*;
+import java.util.ArrayList;
 import parser.Magia;
 
 
@@ -75,31 +76,29 @@ public class DB_Magias {
         }
     }
     
-    public static void consultarMagia(){
+    public static ArrayList<String> consultarMagiaNome(){
         Connection c = connect();
+        ArrayList<String> saida = new ArrayList<>();
         
-        String sql = "SELECT * FROM MAGIAS WHERE(ID > 2 AND ID < 10)";
+        String sql = "SELECT NOME FROM MAGIAS";
         
         try{
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
             
+            int resultSize = result.getMetaData().getColumnCount();
+            
             while(result.next()){
-                System.out.println("ID: " + Integer.toString(result.getInt("ID")) + "\t" +
-                        result.getString("NOME") + "\t" +
-                        result.getString("NIVEL") + "\t" +
-                        result.getString("TEMPO_EXECUCAO") + "\t" +
-                        result.getString("ALCANCE") + "\t" +
-                        result.getString("EFEITO") + "\t" +
-                        result.getString("ALVO") + "\t" +
-                        result.getString("DURACAO") + "\t" +
-                        result.getString("TESTE_RESISTENCIA") + "\t" +
-                        result.getString("FONTE") + "\t" +
-                        result.getString("DESCRICAO"));
+                int i = 1;
+                while(i <= resultSize){
+                    saida.add(result.getString(i++));
+                }
             }
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
+        System.out.println(saida);
+        return saida;
     }
 }
