@@ -18,7 +18,7 @@ public class DB_Magias {
         return c;
     }
     
-    public static void gerarTableMagias(){ //ATRIBUTOS: NOME, NIVEL, TEMPO DE EXECUÇÃO, ALCANCE, ALVOS, DURAÇÃO, TESTE DE RESISTENCIA, FONTE, DESCRIÇÃO
+    public static void gerarTableMagias(){
         Connection c = connect();
         
         String sql = "CREATE TABLE MAGIAS (" +

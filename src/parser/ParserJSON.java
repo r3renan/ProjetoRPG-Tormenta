@@ -1,6 +1,7 @@
 package parser;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import database.DB_Magias;
 import java.io.FileReader;
@@ -8,10 +9,8 @@ import java.util.ArrayList;
 
 public class ParserJSON{
     public static void cadastrarMagias() throws Exception{
-        Gson gson = new Gson();
         JsonReader reader = new JsonReader(new FileReader("src/resources/magias_basico.json"));
-        ArrayList<Magia> magias = new ArrayList<>();
-        magias = gson.fromJson(reader, Magia.class);
+        ArrayList<Magia> magias = new Gson().fromJson(reader, new TypeToken<ArrayList<Magia>>() {}.getType());
         /*System.out.println("Magia atual: " + magia.getNome());
         System.out.println("Nivel: " + magia.getNivel());
         System.out.println("Tempo de Execução: " + magia.getTempoExecucao());
@@ -23,8 +22,10 @@ public class ParserJSON{
         System.out.println("Fonte: " + magia.getFonte());
         System.out.println("Descrição: " + magia.getDescricao());*/
         
-        for(Magia magia : magias){
+        
+        
+        /*for(Magia magia : magias){
             DB_Magias.inserirMagia(magia);
-        }
+        }*/
     }
 }
