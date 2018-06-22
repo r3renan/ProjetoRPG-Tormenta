@@ -25,7 +25,7 @@ public class DB_Magias {
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "NOME TEXT NOT NULL," +
                             "NIVEL TEXT NOT NULL," +
-                            "TEMPO_EXECUÇÃO TEXT," +
+                            "TEMPO_EXECUCAO TEXT," +
                             "ALCANCE TEXT," +
                             "EFEITO TEXT," +
                             "ALVO TEXT," +
@@ -78,15 +78,24 @@ public class DB_Magias {
     public static void consultarMagia(){
         Connection c = connect();
         
-        String sql = "SELECT * FROM MAGIAS";
+        String sql = "SELECT * FROM MAGIAS WHERE(ID > 2 AND ID < 10)";
         
         try{
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
             
             while(result.next()){
-                System.out.println("ID: " + result.getInt("ID") + "\t" +
-                                    result.getString("NOME") + "\t");
+                System.out.println("ID: " + Integer.toString(result.getInt("ID")) + "\t" +
+                        result.getString("NOME") + "\t" +
+                        result.getString("NIVEL") + "\t" +
+                        result.getString("TEMPO_EXECUCAO") + "\t" +
+                        result.getString("ALCANCE") + "\t" +
+                        result.getString("EFEITO") + "\t" +
+                        result.getString("ALVO") + "\t" +
+                        result.getString("DURACAO") + "\t" +
+                        result.getString("TESTE_RESISTENCIA") + "\t" +
+                        result.getString("FONTE") + "\t" +
+                        result.getString("DESCRICAO"));
             }
             
         } catch(Exception e){

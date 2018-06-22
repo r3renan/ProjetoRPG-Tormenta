@@ -1,5 +1,6 @@
 package GUI.criarFicha;
 
+import static database.DB_Magias.consultarMagia;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,10 +35,11 @@ public class TelaCriarFichaController implements Initializable {
     
     @FXML
     public void escolherRaca() throws Exception{
-        Scene scene = btnRacas.getScene();
+        /*Scene scene = btnRacas.getScene();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaRacas.fxml"));
         
-        scene.setRoot(loader.load());
+        scene.setRoot(loader.load());*/
+        consultarMagia();
     }
     
     @FXML
