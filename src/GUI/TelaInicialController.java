@@ -14,7 +14,7 @@ import parser.ParserJSON;
 public class TelaInicialController implements Initializable {
     
     @FXML
-    private Button btnCriarFicha, btnConsultaDB, btnCarregarFicha;
+    private Button btnCriarFicha, btnConsultaDB, btnCriaDB, btnCarregarFicha;
     
     @FXML
     private void telaCriarFicha(ActionEvent event) throws Exception {
@@ -30,14 +30,17 @@ public class TelaInicialController implements Initializable {
         Stage stage = (Stage) btnConsultaDB.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/consultarDB/TelaConsultarMagias.fxml"));
         
-        Scene telaEscolherClasse = new Scene(loader.load(), 800, 600);
-        stage.setScene(telaEscolherClasse);
-        
-        /*try{
+        Scene telaConsultarMagias = new Scene(loader.load(), 800, 600);
+        stage.setScene(telaConsultarMagias);
+    }
+    
+    @FXML
+    private void criarDB(ActionEvent event) throws Exception{
+        try{
             ParserJSON.cadastrarMagias();
         } catch(Exception e){
             System.err.print(e.getClass().getName() + ": " + e.getMessage());
-        }*/
+        }
     }
     
     @Override

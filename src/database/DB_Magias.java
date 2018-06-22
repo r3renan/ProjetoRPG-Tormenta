@@ -69,7 +69,7 @@ public class DB_Magias {
             s.close();
             c.close();
             
-            System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
+            //System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
                     
         } catch (Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

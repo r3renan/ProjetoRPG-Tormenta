@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class ParserJSON{
     public static void cadastrarMagias() throws Exception{
-        JsonReader reader = new JsonReader(new FileReader("src/resources/magias_basico.json"));
+        JsonReader reader = new JsonReader(new FileReader("lib/magias_basico.json"));
         ArrayList<Magia> magias = new Gson().fromJson(reader, new TypeToken<ArrayList<Magia>>() {}.getType());
         /*System.out.println("Magia atual: " + magia.getNome());
         System.out.println("Nivel: " + magia.getNivel());
