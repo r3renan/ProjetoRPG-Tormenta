@@ -98,7 +98,25 @@ public class DB_Magias {
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
-        System.out.println(saida);
         return saida;
+    }
+    
+    public static Magia consultarMagia(String nome){
+        Connection c = connect();
+        String sql = "SELECT * FROM MAGIAS WHERE NOME=" + nome;
+        
+        try {
+            Statement s = c.createStatement();
+            ResultSet result = s.executeQuery(sql);
+            Magia magia = new Magia(result);
+            System.out.println("Nome: " + magia.getNome());
+            
+        } catch(Exception e) {
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        Magia magia = new Magia();
+        
+        return magia;
     }
 }

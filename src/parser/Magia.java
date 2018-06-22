@@ -1,6 +1,9 @@
 package parser;
 
+import java.sql.ResultSet;
+
 public class Magia {
+    private int ID;
     private String nome;
     private String nivel;
     private String tempoExecucao;
@@ -12,8 +15,22 @@ public class Magia {
     private String fonte;
     private String descricao;
     
-   Magia(){
+   public Magia(){
        this.nome = "NAO INICIALIZADO";
+   }
+   
+   public Magia(ResultSet dados) throws Exception{
+       this.ID = dados.getInt("ID");
+       this.nome = dados.getString("NOME");
+       this.nivel = dados.getString("NIVEL");
+       this.tempoExecucao = dados.getString("TEMPO_EXECUCAO");
+       this.alcance = dados.getString("ALCANCE");
+       this.efeito = dados.getString("EFEITO");
+       this.alvo = dados.getString("ALVO");
+       this.duracao = dados.getString("DURACAO");
+       this.testeResistencia = dados.getString("TESTE_RESISTENCIA");
+       this.fonte = dados.getString("FONTE");
+       this.descricao = dados.getString("DESCRICAO");
    }
 
     public String getNome() {
