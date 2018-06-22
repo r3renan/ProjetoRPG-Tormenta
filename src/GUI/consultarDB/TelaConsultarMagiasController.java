@@ -34,6 +34,8 @@ public class TelaConsultarMagiasController implements Initializable {
         testeResistencia.setText(magia.getTesteResistencia());
         fonte.setText(magia.getFonte());
         descricao.setText(magia.getDescricao());
+        
+        
     }
     
     @Override
