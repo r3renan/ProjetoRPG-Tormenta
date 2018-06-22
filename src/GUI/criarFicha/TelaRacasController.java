@@ -22,7 +22,7 @@ public class TelaRacasController implements Initializable {
     @FXML
     private void onMouseClick(){
         String itemSelecionado = lista.getSelectionModel().getSelectedItem();
-        Magia magia = consultarMagia(itemSelecionado);
+        Magia magia = consultarMagia("*", "NOME=\"" + itemSelecionado +"\"");
         
         nome.setText(magia.getNome());
         nivel.setText(magia.getNivel());

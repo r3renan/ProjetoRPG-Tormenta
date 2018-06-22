@@ -101,9 +101,13 @@ public class DB_Magias {
         return saida;
     }
     
-    public static Magia consultarMagia(String nome){
+    public static Magia consultarMagia(String retorno, String busca){
         Connection c = connect();
-        String sql = "SELECT * FROM MAGIAS WHERE NOME=\"" + nome + "\"";
+        String sql = "SELECT " + retorno + " FROM MAGIAS";
+        if (busca != null){
+            sql = sql + " WHERE " + busca;
+        }
+        
         Magia magia = null;
         
         try {
