@@ -9,7 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import parser.Magia;
 import static database.DB_Magias.gerarArrayMagias;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class TelaConsultarMagiasController implements Initializable {
 
@@ -18,6 +22,12 @@ public class TelaConsultarMagiasController implements Initializable {
     
     @FXML
     private Label nome, nivel, tempoExecucao, alcance, efeito, alvo, duracao, testeResistencia, fonte, descricao;
+    
+    @FXML
+    private TextField fieldBusca;
+    
+    @FXML
+    private ComboBox boxEscola, boxNivel, boxTempoExecucao, boxAlcance, boxEfeito, boxAlvo, boxDuracao, boxTesteResistencia, boxFonte;
     
     @FXML
     private void onMouseClick(){
@@ -43,5 +53,9 @@ public class TelaConsultarMagiasController implements Initializable {
         for (String magia : nomeMagias){
             lista.getItems().add(magia);
         }
+        
+        ObservableList<String> valores = FXCollections.observableArrayList("Divina", "Arcana");
+        
+        boxEscola = new ComboBox(valores);
     }
 }

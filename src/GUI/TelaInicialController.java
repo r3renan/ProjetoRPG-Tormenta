@@ -30,7 +30,7 @@ public class TelaInicialController implements Initializable {
         Stage stage = (Stage) btnConsultaDB.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/consultarDB/TelaConsultarMagias.fxml"));
         
-        Scene telaConsultarMagias = new Scene(loader.load(), 800, 600);
+        Scene telaConsultarMagias = new Scene(loader.load(), 1000, 600);
         stage.setScene(telaConsultarMagias);
     }
     
