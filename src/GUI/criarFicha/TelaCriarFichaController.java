@@ -27,11 +27,7 @@ public class TelaCriarFichaController implements Initializable {
     
     @FXML
     public void escolherClasse() throws Exception{
-        Stage stage = (Stage) btnClasses.getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaClasse.fxml"));
-        
-        Scene telaEscolherClasse = new Scene(loader.load(), 800, 600);
-        stage.setScene(telaEscolherClasse);
+        //TODO
     }
     
     @FXML

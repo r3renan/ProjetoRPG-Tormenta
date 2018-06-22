@@ -1,4 +1,4 @@
-package GUI.criarFicha;
+package GUI.consultarDB;
 
 import static database.DB_Magias.consultarMagia;
 import java.net.URL;
@@ -11,7 +11,7 @@ import parser.Magia;
 import static database.DB_Magias.gerarArrayMagias;
 import javafx.scene.control.Label;
 
-public class TelaRacasController implements Initializable {
+public class TelaConsultarMagiasController implements Initializable {
 
     @FXML
     private ListView<String> lista;
