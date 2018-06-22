@@ -76,7 +76,7 @@ public class DB_Magias {
         }
     }
     
-    public static ArrayList<String> consultarMagiaNome(){
+    public static ArrayList<String> gerarArrayMagias(){
         Connection c = connect();
         ArrayList<String> saida = new ArrayList<>();
         
@@ -103,19 +103,18 @@ public class DB_Magias {
     
     public static Magia consultarMagia(String nome){
         Connection c = connect();
-        String sql = "SELECT * FROM MAGIAS WHERE NOME=" + nome;
+        String sql = "SELECT * FROM MAGIAS WHERE NOME=\"" + nome + "\"";
+        Magia magia = null;
         
         try {
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
-            Magia magia = new Magia(result);
+            magia = new Magia(result);
             System.out.println("Nome: " + magia.getNome());
             
         } catch(Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
-        
-        Magia magia = new Magia();
         
         return magia;
     }

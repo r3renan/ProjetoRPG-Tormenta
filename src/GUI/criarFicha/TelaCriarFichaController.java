@@ -1,6 +1,5 @@
 package GUI.criarFicha;
 
-import static database.DB_Magias.consultarMagiaNome;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import static database.DB_Magias.gerarArrayMagias;
 
 public class TelaCriarFichaController implements Initializable {
         
