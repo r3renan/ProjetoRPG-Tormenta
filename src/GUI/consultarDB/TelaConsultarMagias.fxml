@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
@@ -35,7 +36,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="275.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Nome:">
@@ -83,10 +84,13 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Descrição:" GridPane.rowIndex="9">
+                        <Label text="Descrição:" GridPane.rowIndex="9" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
                         </Label>
                         <Label fx:id="nome" GridPane.columnIndex="1" />
                         <Label fx:id="nivel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -97,7 +101,10 @@
                         <Label fx:id="duracao" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <Label fx:id="testeResistencia" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                         <Label fx:id="fonte" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Label fx:id="descricao" maxWidth="320.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label fx:id="descricao" maxWidth="320.0" textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin></Label>
                      </children>
                   </GridPane>
                </children>

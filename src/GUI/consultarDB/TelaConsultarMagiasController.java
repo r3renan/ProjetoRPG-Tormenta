@@ -35,7 +35,6 @@ public class TelaConsultarMagiasController implements Initializable {
         fonte.setText(magia.getFonte());
         descricao.setText(magia.getDescricao());
         
-        
     }
     
     @Override
