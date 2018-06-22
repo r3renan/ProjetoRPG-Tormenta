@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import static database.DB_Magias.gerarArrayMagias;
+import javafx.stage.Stage;
 
 public class TelaCriarFichaController implements Initializable {
         
@@ -27,18 +27,20 @@ public class TelaCriarFichaController implements Initializable {
     
     @FXML
     public void escolherClasse() throws Exception{
-        Scene scene = btnClasses.getScene();
+        Stage stage = (Stage) btnClasses.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaClasse.fxml"));
         
-        scene.setRoot(loader.load());
+        Scene telaEscolherClasse = new Scene(loader.load(), 800, 600);
+        stage.setScene(telaEscolherClasse);
     }
     
     @FXML
     public void escolherRaca() throws Exception{
-        Scene scene = btnRacas.getScene();
+        Stage stage = (Stage) btnRacas.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaRacas.fxml"));
         
-        scene.setRoot(loader.load());
+        Scene telaEscolherRaca = new Scene(loader.load(), 800, 600);
+        stage.setScene(telaEscolherRaca);
     }
     
     @FXML

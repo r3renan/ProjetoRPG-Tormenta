@@ -24,8 +24,8 @@ public class ParserJSON{
         
         
         
-        /*for(Magia magia : magias){
+        for(Magia magia : magias){
             DB_Magias.inserirMagia(magia);
-        }*/
+        }
     }
 }

@@ -20,17 +20,24 @@ public class Magia {
    }
    
    public Magia(ResultSet dados) throws Exception{
-       this.ID = dados.getInt("ID");
-       this.nome = dados.getString("NOME");
-       this.nivel = dados.getString("NIVEL");
-       this.tempoExecucao = dados.getString("TEMPO_EXECUCAO");
-       this.alcance = dados.getString("ALCANCE");
-       this.efeito = dados.getString("EFEITO");
-       this.alvo = dados.getString("ALVO");
-       this.duracao = dados.getString("DURACAO");
-       this.testeResistencia = dados.getString("TESTE_RESISTENCIA");
-       this.fonte = dados.getString("FONTE");
-       this.descricao = dados.getString("DESCRICAO");
+       ID = dados.getInt("ID");
+       nome = dados.getString("NOME");
+       nivel = dados.getString("NIVEL");
+       tempoExecucao = dados.getString("TEMPO_EXECUCAO");
+       alcance = dados.getString("ALCANCE");
+       efeito = dados.getString("EFEITO");
+       alvo = dados.getString("ALVO");
+       duracao = dados.getString("DURACAO");
+       testeResistencia = dados.getString("TESTE_RESISTENCIA");
+       fonte = dados.getString("FONTE");
+       descricao = dados.getString("DESCRICAO");
+       
+       /*if (alcance == null) alcance = "-";
+       if (efeito == null) efeito = "-";
+       if (alvo == null) alvo = "-";
+       if (duracao == null) duracao = "-";
+       if (testeResistencia == null) testeResistencia = "-";
+       if (fonte == null) fonte = "-";*/
    }
 
     public String getNome() {
@@ -62,7 +69,7 @@ public class Magia {
     }
 
     public void setAlcance(String alcance) {
-        this.alcance = alcance;
+       this.alcance = alcance;
     }
 
     public String getEfeito() {
@@ -112,5 +119,4 @@ public class Magia {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
 }
