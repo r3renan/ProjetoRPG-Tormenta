@@ -159,25 +159,15 @@ public class TelaConsultarMagiasController implements Initializable {
         
         //Popular opções nas caixas de seleção de busca e definir valor padrão como nulo
         boxDominio.getItems().addAll(null, "Arcana", "Divina");
-        
         boxDescritor.getItems().addAll(null, "Abjuração", "Adivinhação", "Água", "Ar", "Bem", "Caos", "Cura", "Eletricidade", "Encantamento", "Escuridão", "Essência", "Fogo", "Frio", "Ilusão", "Invocação", "Luz", "Mal", "Medo", "Necromancia", "Ordem", "Tempo", "Terra", "Transmutação", "Sônico");
-
         boxNivel.getItems().addAll(null, "Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5", "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10");
-        
         boxTempoExecucao.getItems().addAll(null, "Ação padrão", "Ação completa", "Tempo");
-        
         boxAlcance.getItems().addAll(null, "Toque", "Pessoal", "Metros", "Ilimitado");
-        
         boxArea.getItems().addAll(null, "Possui", "Não possui");
-        
         boxEfeito.getItems().addAll(null, "Possui", "Não possui");
-        
         boxAlvo.getItems().addAll(null, "Criatura", "Objeto", "Jogador");
-        
         boxDuracao.getItems().addAll(null, "Concentração", "Instantânea", "Permanente", "Tempo", "Rodada");
-        
         boxTesteResistencia.getItems().addAll(null, "Fortitude anula", "Fortitude parcial", "Fortitude reduz à metade", "Vontade anula", "Vontade parcial", "Vontade reduz à metade", "Nenhum");
-        
         boxFonte.getItems().addAll(null, "Módulo básico");
     }
 }
