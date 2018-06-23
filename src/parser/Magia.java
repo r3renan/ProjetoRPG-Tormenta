@@ -8,6 +8,7 @@ public class Magia {
     private String nivel;
     private String tempoExecucao;
     private String alcance;
+    private String area;
     private String efeito;
     private String alvo;
     private String duracao;
@@ -25,6 +26,7 @@ public class Magia {
        nivel = dados.getString("NIVEL");
        tempoExecucao = dados.getString("TEMPO_EXECUCAO");
        alcance = dados.getString("ALCANCE");
+       area = dados.getString("AREA");
        efeito = dados.getString("EFEITO");
        alvo = dados.getString("ALVO");
        duracao = dados.getString("DURACAO");
@@ -70,6 +72,14 @@ public class Magia {
 
     public void setAlcance(String alcance) {
        this.alcance = alcance;
+    }
+    
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+       this.area = area;
     }
 
     public String getEfeito() {

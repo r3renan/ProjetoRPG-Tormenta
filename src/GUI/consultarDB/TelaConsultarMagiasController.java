@@ -23,13 +23,13 @@ public class TelaConsultarMagiasController implements Initializable {
     private ListView<String> lista;
     
     @FXML
-    private Label nome, nivel, tempoExecucao, alcance, efeito, alvo, duracao, testeResistencia, fonte, descricao;
+    private Label nome, nivel, tempoExecucao, alcance, area, efeito, alvo, duracao, testeResistencia, fonte, descricao;
     
     @FXML
     private TextField fieldBusca;
     
     @FXML
-    private ComboBox boxEscola, boxNivel, boxTempoExecucao, boxAlcance, boxEfeito, boxAlvo, boxDuracao, boxTesteResistencia, boxFonte;
+    private ComboBox boxDominio, boxDescritor, boxNivel, boxTempoExecucao, boxAlcance, boxArea, boxEfeito, boxAlvo, boxDuracao, boxTesteResistencia, boxFonte;
     
     @FXML
     private Button btnBuscar;
@@ -46,12 +46,12 @@ public class TelaConsultarMagiasController implements Initializable {
         nivel.setText(magia.getNivel());
         tempoExecucao.setText(magia.getTempoExecucao());
         alcance.setText(magia.getAlcance());
+        area.setText(magia.getArea());
         efeito.setText(magia.getEfeito());
         alvo.setText(magia.getAlvo());
         duracao.setText(magia.getDuracao());
         testeResistencia.setText(magia.getTesteResistencia());
         fonte.setText(magia.getFonte());
-        //textoDescricao.setText(magia.getDescricao());
         textoDescricao.getChildren().clear();
         textoDescricao.getChildren().add(new Text(magia.getDescricao()));
         
@@ -61,13 +61,80 @@ public class TelaConsultarMagiasController implements Initializable {
     private void buscar(ActionEvent event) throws Exception{
         String query = "SELECT NOME FROM MAGIAS WHERE NOME LIKE '%" + fieldBusca.getText() + "%'";
         
-        if (boxEscola.getValue() != null){
-            query = query + " AND NIVEL LIKE '%" + boxEscola.getValue() + "%'";
+        if (boxDominio.getValue() != null){
+            query = query + " AND NIVEL LIKE '%" + boxDominio.getValue() + "%'";
+        }
+        
+        if (boxDescritor.getValue() != null){
+            query = query + " AND (NIVEL LIKE '%(%' AND NIVEL LIKE '%" + boxDescritor.getValue().toString().toLowerCase() + "%')";
         }
         
         if (boxNivel.getValue() != null){
             String nivel = boxNivel.getValue().toString();
             query = query + " AND NIVEL LIKE '%" + (nivel.substring(nivel.indexOf(" "), nivel.length()))+ "%'";
+        }
+        
+        if (boxTempoExecucao.getValue() != null){
+            if (boxTempoExecucao.getValue().toString().equals("Tempo")){
+                query = query + " AND (TEMPO_EXECUCAO LIKE '%minuto%' OR '%dia%' OR '%hora%')";
+            } else {
+                query = query + " AND TEMPO_EXECUCAO='" + boxTempoExecucao.getValue() + "'";
+            }
+        }
+        
+        if (boxAlcance.getValue() != null){
+            if (boxAlcance.getValue().toString().equals("Metros")){
+                query = query + " AND ALCANCE LIKE '%m'";
+            } else {
+                query = query + " AND ALCANCE='" + boxAlcance.getValue() +"'";
+            }
+        }
+        
+        if (boxArea.getValue() != null){
+            String efeito = boxArea.getValue().toString();
+            if (efeito.equals("Possui")){
+                query = query + " AND AREA NOT LIKE '%null%'";
+            } else {
+                query = query + " AND AREA LIKE '%null%'";
+            }
+        }
+        
+        if (boxEfeito.getValue() != null){
+            String efeito = boxEfeito.getValue().toString();
+            if (efeito.equals("Possui")){
+                query = query + " AND EFEITO NOT LIKE '%null%'";
+            } else {
+                query = query + " AND EFEITO LIKE '%null%'";
+            }
+        }
+        
+        if (boxAlvo.getValue() != null){
+            String alvo = boxAlvo.getValue().toString();
+            if (alvo.equals("Jogador"))
+                query = query + " AND ALVO='Você'";
+            if (alvo.equals("Criatura"))
+                query = query + " AND ALVO LIKE '%criatura%'";
+            if (alvo.equals("Objeto"))
+                query = query + " AND (ALVO NOT LIKE '%criatura%' AND ALVO NOT LIKE '%Você%' AND ALVO NOT LIKE '%null%')";
+        }
+        
+        if (boxDuracao.getValue() != null){
+            String duracao = boxDuracao.getValue().toString();
+            if (duracao.equals("Tempo")){
+                query = query + " AND (DURACAO LIKE '%minuto%' OR DURACAO LIKE '%hora%' OR DURACAO LIKE '%dia%' OR DURACAO LIKE '%semana%')";
+            } else if (duracao.equals("Rodada")){
+                query = query + " AND DURACAO LIKE '%rodada%'";
+            } else {
+                query = query + "AND DURACAO LIKE '%" + duracao + "%'";
+            }
+        }
+        
+        if (boxTesteResistencia.getValue() != null){
+            query = query + "AND TESTE_RESISTENCIA LIKE '%" + boxTesteResistencia.getValue() + "%'";
+        }
+        
+        if (boxFonte.getValue() != null){
+            query = query + "AND FONTE LIKE '%" + boxFonte.getValue() + "%'";
         }
         
         listarMagias(gerarArrayMagias(query));
@@ -91,31 +158,26 @@ public class TelaConsultarMagiasController implements Initializable {
         listarMagias(nomeMagias);
         
         //Popular opções nas caixas de seleção de busca e definir valor padrão como nulo
-        boxEscola.getItems().addAll(null, "Arcana", "Divina");
-        boxEscola.setValue(null);
+        boxDominio.getItems().addAll(null, "Arcana", "Divina");
+        
+        boxDescritor.getItems().addAll(null, "Abjuração", "Adivinhação", "Água", "Ar", "Bem", "Caos", "Cura", "Eletricidade", "Encantamento", "Escuridão", "Essência", "Fogo", "Frio", "Ilusão", "Invocação", "Luz", "Mal", "Medo", "Necromancia", "Ordem", "Tempo", "Terra", "Transmutação", "Sônico");
 
         boxNivel.getItems().addAll(null, "Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5", "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10");
-        boxNivel.setValue(null);
         
-        boxTempoExecucao.getItems().addAll();
-        boxTempoExecucao.setValue(null);
+        boxTempoExecucao.getItems().addAll(null, "Ação padrão", "Ação completa", "Tempo");
         
-        boxAlcance.getItems().addAll(null, "Toque", "Pessoal", "3m - 10m", "> 10m");
-        boxAlcance.setValue(null);
+        boxAlcance.getItems().addAll(null, "Toque", "Pessoal", "Metros", "Ilimitado");
         
-        boxEfeito.getItems().addAll();
-        boxEfeito.setValue(null);
+        boxArea.getItems().addAll(null, "Possui", "Não possui");
         
-        boxAlvo.getItems().addAll();
-        boxAlvo.setValue(null);
+        boxEfeito.getItems().addAll(null, "Possui", "Não possui");
         
-        boxDuracao.getItems().addAll();
-        boxDuracao.setValue(null);
+        boxAlvo.getItems().addAll(null, "Criatura", "Objeto", "Jogador");
         
-        boxTesteResistencia.getItems().addAll();
-        boxTesteResistencia.setValue(null);
+        boxDuracao.getItems().addAll(null, "Concentração", "Instantânea", "Permanente", "Tempo", "Rodada");
         
-        boxFonte.getItems().addAll();
-        boxFonte.setValue(null);
+        boxTesteResistencia.getItems().addAll(null, "Fortitude anula", "Fortitude parcial", "Fortitude reduz à metade", "Vontade anula", "Vontade parcial", "Vontade reduz à metade", "Nenhum");
+        
+        boxFonte.getItems().addAll(null, "Módulo básico");
     }
 }

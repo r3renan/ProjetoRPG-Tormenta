@@ -28,6 +28,7 @@ public class DB_Magias {
                             "NIVEL TEXT NOT NULL," +
                             "TEMPO_EXECUCAO TEXT," +
                             "ALCANCE TEXT," +
+                            "AREA TEXT," +
                             "EFEITO TEXT," +
                             "ALVO TEXT," +
                             "DURACAO TEXT," +
@@ -56,6 +57,7 @@ public class DB_Magias {
                     + "\"" + magia.getNivel() + "\","
                     + "\"" + magia.getTempoExecucao() + "\","
                     + "\"" + magia.getAlcance() + "\","
+                    + "\"" + magia.getArea() + "\","
                     + "\"" + magia.getEfeito() + "\","
                     + "\"" + magia.getAlvo() + "\","
                     + "\"" + magia.getDuracao() + "\","
