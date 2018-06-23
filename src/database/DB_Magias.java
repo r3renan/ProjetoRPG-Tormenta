@@ -76,15 +76,13 @@ public class DB_Magias {
         }
     }
     
-    public static ArrayList<String> gerarArrayMagias(){
+    public static ArrayList<String> gerarArrayMagias(String query){
         Connection c = connect();
         ArrayList<String> saida = new ArrayList<>();
         
-        String sql = "SELECT NOME FROM MAGIAS";
-        
         try{
             Statement s = c.createStatement();
-            ResultSet result = s.executeQuery(sql);
+            ResultSet result = s.executeQuery(query);
             
             int resultSize = result.getMetaData().getColumnCount();
             
