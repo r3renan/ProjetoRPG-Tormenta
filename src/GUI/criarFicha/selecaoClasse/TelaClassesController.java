@@ -1,4 +1,4 @@
-package GUI.criarFicha;
+package GUI.criarFicha.selecaoClasse;
 
 import java.net.URL;
 import java.util.ResourceBundle;
