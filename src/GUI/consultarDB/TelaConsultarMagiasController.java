@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 public class TelaConsultarMagiasController implements Initializable {
 
@@ -33,6 +35,9 @@ public class TelaConsultarMagiasController implements Initializable {
     private Button btnBuscar;
     
     @FXML
+    private TextFlow textoDescricao;
+    
+    @FXML
     private void onMouseClick(){
         String itemSelecionado = lista.getSelectionModel().getSelectedItem();
         Magia magia = consultarMagia("*", "NOME=\"" + itemSelecionado +"\"");
@@ -46,16 +51,24 @@ public class TelaConsultarMagiasController implements Initializable {
         duracao.setText(magia.getDuracao());
         testeResistencia.setText(magia.getTesteResistencia());
         fonte.setText(magia.getFonte());
-        descricao.setText(magia.getDescricao());
+        //textoDescricao.setText(magia.getDescricao());
+        textoDescricao.getChildren().clear();
+        textoDescricao.getChildren().add(new Text(magia.getDescricao()));
         
     }
     
     @FXML
     private void buscar(ActionEvent event) throws Exception{
-        String query = "SELECT NOME FROM";
+        String query = "SELECT NOME FROM MAGIAS WHERE NOME LIKE '%" + fieldBusca.getText() + "%'";
         
-        System.out.println("Hi");
-        System.out.println(fieldBusca.getText());
+        if (boxEscola.getValue() != null){
+            query = query + " AND NIVEL LIKE '%" + boxEscola.getValue() + "%'";
+        }
+        
+        if (boxNivel.getValue() != null){
+            String nivel = boxNivel.getValue().toString();
+            query = query + " AND NIVEL LIKE '%" + (nivel.substring(nivel.indexOf(" "), nivel.length()))+ "%'";
+        }
         
         listarMagias(gerarArrayMagias(query));
         
@@ -81,7 +94,7 @@ public class TelaConsultarMagiasController implements Initializable {
         boxEscola.getItems().addAll(null, "Arcana", "Divina");
         boxEscola.setValue(null);
 
-        boxNivel.getItems().addAll();
+        boxNivel.getItems().addAll(null, "Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5", "Nivel 6", "Nivel 7", "Nivel 8", "Nivel 9", "Nivel 10");
         boxNivel.setValue(null);
         
         boxTempoExecucao.getItems().addAll();

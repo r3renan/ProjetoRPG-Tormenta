@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,6 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane id="AnchorPane" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.consultarDB.TelaConsultarMagiasController">
    <children>
@@ -41,7 +43,7 @@
                               <ComboBox fx:id="boxTesteResistencia" layoutX="20.0" layoutY="461.0" prefWidth="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                               <Label layoutX="20.0" layoutY="496.0" text="Fonte:" />
                               <ComboBox fx:id="boxFonte" layoutX="20.0" layoutY="516.0" prefWidth="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-                              <Button fx:id="btnBuscar" layoutX="123.0" layoutY="555.0" minHeight="30.0" mnemonicParsing="false" text="Buscar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
+                              <Button fx:id="btnBuscar" layoutX="123.0" layoutY="555.0" minHeight="30.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" />
                               <ComboBox fx:id="boxEscola" layoutX="20.0" layoutY="76.0" prefWidth="150.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                            </children>
                         </AnchorPane>
@@ -136,10 +138,19 @@
                         <Label fx:id="duracao" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <Label fx:id="testeResistencia" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                         <Label fx:id="fonte" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Label fx:id="descricao" maxWidth="320.0" textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="TOP">
-                           <GridPane.margin>
-                              <Insets top="5.0" />
-                           </GridPane.margin></Label>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <children>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="60.0" layoutY="38.0" prefHeight="275.0" prefWidth="307.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <TextFlow fx:id="textoDescricao" minHeight="-Infinity" minWidth="-Infinity" prefHeight="268.0" prefWidth="285.0" textAlignment="JUSTIFY">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextFlow>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
                      </children>
                   </GridPane>
                </children>
