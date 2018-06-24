@@ -13,7 +13,7 @@ public class ParserJSON{
         ArrayList<Magia> magias = new Gson().fromJson(reader, new TypeToken<ArrayList<Magia>>() {}.getType());
         
         for(Magia magia : magias){
-            DB_Magias.inserirMagia(magia);
+            DB_Magias.inserir(magia);
         }
     }
 }

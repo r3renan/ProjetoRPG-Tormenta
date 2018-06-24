@@ -37,7 +37,7 @@ public class DB_Magias {
         }
     }
     
-    public static void inserirMagia(Magia magia){ //TODO
+    public static void inserir(Magia magia){ //TODO
         Connection c = connect();
         
         String sql = "INSERT INTO MAGIAS VALUES("
@@ -90,7 +90,7 @@ public class DB_Magias {
         return saida;
     }
     
-    public static Magia consultarMagia(String retorno, String busca){
+    public static Magia consultar(String retorno, String busca){
         Connection c = connect();
         String sql = "SELECT " + retorno + " FROM MAGIAS";
         if (busca != null){

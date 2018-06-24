@@ -1,6 +1,5 @@
 package GUI.consultarDB;
 
-import static database.DB_Magias.consultarMagia;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -16,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import static database.DB_Magias.consultar;
 
 public class TelaConsultarMagiasController implements Initializable {
 
@@ -40,7 +40,7 @@ public class TelaConsultarMagiasController implements Initializable {
     @FXML
     private void onMouseClick(){
         String itemSelecionado = lista.getSelectionModel().getSelectedItem();
-        Magia magia = consultarMagia("*", "NOME='" + itemSelecionado +"'");
+        Magia magia = consultar("*", "NOME='" + itemSelecionado +"'");
         
         nome.setText(magia.getNome());
         nivel.setText(magia.getNivel());
