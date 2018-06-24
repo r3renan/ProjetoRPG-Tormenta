@@ -33,13 +33,6 @@ public class Magia {
        testeResistencia = dados.getString("TESTE_RESISTENCIA");
        fonte = dados.getString("FONTE");
        descricao = dados.getString("DESCRICAO");
-       
-       /*if (alcance == null) alcance = "-";
-       if (efeito == null) efeito = "-";
-       if (alvo == null) alvo = "-";
-       if (duracao == null) duracao = "-";
-       if (testeResistencia == null) testeResistencia = "-";
-       if (fonte == null) fonte = "-";*/
    }
 
     public String getNome() {
