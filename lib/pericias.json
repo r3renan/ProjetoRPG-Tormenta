@@ -1,0 +1,14 @@
+[
+{
+	"nome" : "Acrobacia",
+	"descricao" : "Você consegue andar na corda bamba, cair sem se machucar e fazer outras proezas acrobáticas.",
+	"habilidade_chave" : "Destreza",
+	"penalidade" : "Armadura",
+},
+{
+	"nome" : "",
+	"descricao" : "",
+	"habilidade_chave" : "",
+	"penalidade" : "",	
+}
+]

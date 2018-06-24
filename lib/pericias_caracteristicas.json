@@ -1,0 +1,41 @@
+[
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Amortecer queda",
+	"descricao" : "você pode reduzir o dano de uma queda para 1,5m menos que a altura real, como uma reação",
+	"cooldown" : "CD 15"
+},
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Arte da fuga",
+	"descricao" : "você pode escapar de cordas, redes e algemas como uma ação completa. Para cordas, faça um teste de Acrobacia oposto a um teste de Destreza de quem amarrou você (essa pessoa recebe +10 no teste, porque amarrar alguém é mais fácil que escapar das amarras). Você também pode escapar de redes (CD 20) e algemas (CD 30)."
+},
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Cambalhota",
+	"descricao" : "você pode atravessar um quadrado ocupado por um inimigo, como parte de seu movimento. Faça um teste de Acrobacia oposto ao teste de Iniciativa do oponente. Se você for bemsucedido, atravessa o quadrado; se falhar, não consegue atravessar o quadrado, e sua ação de movimento termina. Se estiver usando regras para ataques de oportunidade, você também pode usar esta manobra para escapar de um quadrado ameaçado sem provocar ataques de oportunidade (faça um teste contra cada criatura ameaçando o quadrado onde você está). Usar a cambalhota custa o dobro do deslocamento."
+},
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Equilibrio",
+	"descricao" : "você pode se equilibrar ao andar em superfícies precárias, como um piso escorregadio (CD 10), o alto de um muro estreito (CD 15) ou uma corda esticada (CD 20). Cada ação de movimento em uma situação dessas exige um teste deAcrobacia. Em caso de sucesso você consegue andar metade do seu deslocamento; se falhar, não consegue andar; e se falhar por 5 ou mais, você cai."
+},
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Levantar-se rapidamente",
+	"descricao" : "caso esteja caído, você pode fi car de pé como uma ação livre. Se falhar por 5 ou mais, você perde uma ação de movimento e continua caído.",
+	"cooldown" : "CD 20"
+},
+{
+	"pericia_ref" : "Acrobacia",
+	"nome" : "Passar por espaço apertado",
+	"descricao" : "você pode rastejar por espaços estreitos, sufi cientes para criaturas uma categoria de tamanho menor (por exemplo, um humano poderia passar por umespaço sufi ciente apenas para um goblin), como uma ação completa. Nesta condição você se move com metade da velocidade normal. As manobras amortecer queda, cambalhota, levantar-se rapidamente e passar por espaço apertado só podem ser tentadas se você é treinado em Acrobacia",
+	"cooldown" : "CD 30"
+}
+{
+	"pericia_ref" : "",
+	"nome" : "",
+	"descricao" : "",
+	"cooldown" : ""
+}
+]

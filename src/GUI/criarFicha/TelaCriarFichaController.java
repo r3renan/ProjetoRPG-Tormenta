@@ -30,7 +30,7 @@ public class TelaCriarFichaController implements Initializable {
         Stage stage = (Stage) btnClasses.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaClasses.fxml"));
         
-        Scene telaEscolherClasse = new Scene(loader.load(), 800, 600);
+        Scene telaEscolherClasse = new Scene(loader.load(), 1000, 720);
         stage.setScene(telaEscolherClasse);
     }
     
@@ -39,7 +39,7 @@ public class TelaCriarFichaController implements Initializable {
         Stage stage = (Stage) btnRacas.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaRacas.fxml"));
         
-        Scene telaEscolherRaca = new Scene(loader.load(), 800, 600);
+        Scene telaEscolherRaca = new Scene(loader.load(), 1000, 720);
         stage.setScene(telaEscolherRaca);
     }
     

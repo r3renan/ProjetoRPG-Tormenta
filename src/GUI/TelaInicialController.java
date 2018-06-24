@@ -21,7 +21,7 @@ public class TelaInicialController implements Initializable {
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
-        Scene novaScene = new Scene(loader.load(), 800, 600);
+        Scene novaScene = new Scene(loader.load(), 1000, 720);
         stage.setScene(novaScene);
     }
     

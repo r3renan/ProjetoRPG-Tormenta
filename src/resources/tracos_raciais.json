@@ -1,0 +1,185 @@
+[{
+	"raca" : "Anão",
+	"traco" : "+4 Constituição, +2 Sabedoria, –2 Destreza. Anões são resistentes e sábios, mas um tanto lentos."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Deslocamento 6m. Embora sejam, seres de tamanho Médio, anões têm pernas curtas e seu deslocamento é o mesmo de criaturas Pequenas. No entanto, o deslocamento de um anão jamais é reduzido por uso de armadura ou excesso de carga."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Visão no Escuro. Anões podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um anão ignora camufl agem (incluindo camuflagem total) por escuridão."	
+},
+{
+	"raca" : "Anão",
+	"traco" : "+4 em testes de resistência contra venenos e magia."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Para anões, todos os tipos de machados e martelos são armas simples."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Classe de armadura +4 contra adversários de tamanho Grande ou maior."
+},
+{
+	"raca" : "Anão",
+	"traco" : "+2 em testes de perícias para assuntos relacionados a pedra e metal, apenas para perícias com Inteligência ou Sabedoria como habilidade-chave. Este bônus aplica-se a coisas como masmorras, armadilhas, passagens secretas, armas, armaduras, jóias e gemas preciosas, objetos de arte..."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 Destreza, +2 Inteligência, –2 Constituição. A agilidade e intelecto dos elfos são lendários, embora sejam mais frágeis que os humanos."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "Visão na Penumbra. Um elfo ignora camuflagem (mas não camufl agem total) por escuridão. Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 em testes de Identifi car Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "A dificuldade do teste de resistência contra magias arcanas, lançadas por um elfo aumenta em CD +2."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional"
+},
+{
+	"raca" : "Goblin",
+	"traco" : "+4 Destreza, +2 Constituição, –2 Carisma. Goblins são ágeis e resistentes, mas também rudes."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Tamanho Pequeno. Goblins recebem classe de armadura +1, +1 nas jogadas de ataque e +4 em testes de Furtividade, mas precisam usar armas menores."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Deslocamento 9m. Apesar de pequenos, goblins são rápidos. Sua velocidade é a mesma de criaturas Médias."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Visão no Escuro. Goblins (assim como outros goblinóides) podem enxergar no escuro a até 18 metros,apenas em preto e branco. Um goblin ignora camufl agem (incluindo camuflagem total) por escuridão."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "+4 em testes de Fortitude contra doenças e venenos. Goblins também não precisam fazer testes de Fortitude por ingerir comida estragada"
+},
+{
+	"raca" : "Goblin",
+	"traco" : "+4 em testes de Ladinagem e Oficio (um à escolha do jogador). Goblins estão acostumados a roubar para viver, e têm aptidão natural para engenhocas"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+4 Destreza, +2 Carisma, –2 Força. Halflings são acrobáticos e cativantes, mas fi sicamente fracos."
+},
+{
+	"raca" : "Halfling",
+	"traco" : "Tamanho Pequeno. Halflings recebem classe de armadura +1, +1 nas jogadas de ataque e +4 em testes de Furtividade, mas precisam usar armas menores."
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+2 em todos os testes de resistência, por sua sorte incrível"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+1 em jogadas de ataque com armas de arremesso e fundas. O arremesso de pedras é um esporte popular da raça"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "Para halflings a perícia Atletismo é baseada em Destreza, não em Força"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+4 em testes de Enganação. Ninguém desconfia de halflings."
+},
+{
+	"raca" : "Humano",
+	"traco" : "+2 em duas habilidades à escolha do jogador."
+},
+{
+	"raca" : "Humano",
+	"traco" : "2 talentos adicionais à escolha do jogador"
+},
+{
+	"raca" : "Humano",
+	"traco" : "2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "+2 em duas habilidades à escolha do jogador (exceto Carisma), –4 Carisma. Lefou têm habilidades acima da média, mas também problemas de identidade e difi culdade em situações sociais."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Monstro. Um lefou não é considerado humano ou humanóide, sendo imune a magias e efeitos que afetam apenas estas criaturas."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Visão no escuro. Um lefou ignora camuflagem (incluindo camuflagem total) por escuridão. Lefou enxergam normalmente no escuro, embora apenas em preto e branco."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "2 talentos da Tormenta adicionais. O lefou não perde pontos de Carisma por estes talentos (mas perde se adquirir outros)."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Deformidade. Todo lefou tem algum defeito físico que, embora desagradável aos olhos, confere certa vantagem. O jogador deve escolher uma entre as seguintes. Articulações fl exíveis: +4 em testes de Acrobacia. Dedos rígidos: deslocamento de escalada 4,5m. Dentes afi ados: +4 em testes de Intimidação. Mãos membranosas: deslocamento de natação 4,5m. Olhos vermelhos: +4 em testes de Percepção (apenas para observar). Pele rígida: classe de armadura +1"
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Afinidade com a Tormenta. Um lefou jamais recebe níveis negativos devido a efeitos causados pela Tormenta ou seus habitantes. Ele ainda pode receber níveis negativos de outras formas."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "+4 Força, +2 Constituição, –2 Carisma. Minotauros são fortes e resistentes, mas também arrogantes e teimosos."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Classe de armadura +1. Minotauros têm couro rígido"
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este)."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear usando o faro, e também detectam automaticamente a presença de criaturas a até 9m."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder"
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "+4 Carisma, +2 Inteligência, –2 Sabedoria. Qareen são atraentes, simpáticos e brilhantes, embora um pouco ingênuos."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "+4 em testes de Identifi car Magia. A natureza mágica dos meio-gênios faz com que eles entendam melhor o funcionamento da magia."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Desejos. Sempre que um qareen conjura uma magia arcana a pedido de outra pessoa, ele gasta –1 ponto de magia (mínimo 1 PM). Ele só pode usar esta habilidade se ainda tiver pelo menos 1 PM restante. “Fazer um desejo” ao meio-gênio é uma ação livre. Em combate, isso significa que o qareen deve aguardar pela iniciativa de quem fez o pedido para poder conjurar a magia (que tem tempo de conjuração normal). O qareen não tem a obrigação de conjurar magias contra a própria vontade, mesmo que alguém peça."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode conjurar todos os truques (magias arcanas de nível 0) presentes neste livro, como um feiticeiro de mesmo nível. No entanto, ele só pode conjurar estes truques quando outra pessoa pede."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Uma vez por dia, um qareen pode conjurar vôo como um feiticeiro de mesmo nível, sem gastar pontos de magia."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: Água: resistência a frio e ácido 5. Ar: resistência a eletricidade e sônico 5. Fogo: resistência a fogo 5. Terra: redução de dano 3/cortante ou per furante. Luz: resistência a eletricidade 8. Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infl igir ferimentos)."
+}
+]
