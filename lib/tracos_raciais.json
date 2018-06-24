@@ -1,0 +1,57 @@
+[{
+	"raca" : "Anão",
+	"traco" : "+4 Constituição, +2 Sabedoria, –2 Destreza. Anões são resistentes e sábios, mas um tanto lentos."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Deslocamento 6m. Embora sejam, seres de tamanho Médio, anões têm pernas curtas e seu deslocamento é o mesmo de criaturas Pequenas. No entanto, o deslocamento de um anão jamais é reduzido por uso de armadura ou excesso de carga."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Visão no Escuro. Anões podem enxergar no escuro a até 18 metros, apenas em preto e branco. Um anão ignora camufl agem (incluindo camuflagem total) por escuridão."	
+},
+{
+	"raca" : "Anão",
+	"traco" : "+4 em testes de resistência contra venenos e magia."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Para anões, todos os tipos de machados e martelos são armas simples."
+},
+{
+	"raca" : "Anão",
+	"traco" : "Classe de armadura +4 contra adversários de tamanho Grande ou maior."
+},
+{
+	"raca" : "Anão",
+	"traco" : "+2 em testes de perícias para assuntos relacionados a pedra e metal, apenas para perícias com Inteligência ou Sabedoria como habilidade-chave. Este bônus aplica-se a coisas como masmorras, armadilhas, passagens secretas, armas, armaduras, jóias e gemas preciosas, objetos de arte..."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 Destreza, +2 Inteligência, –2 Constituição. A agilidade e intelecto dos elfos são lendários, embora sejam mais frágeis que os humanos."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "Visão na Penumbra. Um elfo ignora camuflagem (mas não camufl agem total) por escuridão. Elfos podem ver duas vezes mais longe que os humanos em condições de pouca iluminação, como luz das estrelas e tochas."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 em testes de Vontade contra encantamentos. Elfos também são imunes à magia sono."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "+4 em testes de Identifi car Magia e Percepção. Elfos têm familiaridade com magia e sentidos apurados."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "A dificuldade do teste de resistência contra magias arcanas, lançadas por um elfo aumenta em CD +2."
+},
+{
+	"raca" : "Elfo",
+	"traco" : "Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional"
+},
+{
+	"raca" : 
+}
+
+]
