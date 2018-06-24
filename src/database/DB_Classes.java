@@ -1,22 +1,10 @@
 package database;
 
+import static database.Database.connect;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.Statement;
 
 public class DB_Classes {
-    
-    private static Connection connect(){
-        Connection c = null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-        } catch (Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
-        
-        return c;
-    }
     
     public static void gerarTableClasses(){
         Connection c = connect();

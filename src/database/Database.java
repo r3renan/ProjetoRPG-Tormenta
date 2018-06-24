@@ -2,7 +2,7 @@ package database;
 
 import java.sql.*;
 
-public class GerarDatabase {
+public class Database {
 
     public static void gerarDatabase() {
         Connection c = null;
@@ -19,4 +19,15 @@ public class GerarDatabase {
         System.out.println("Banco de dados gerado com sucesso.");
     }
     
+    public static Connection connect(){
+        Connection c = null;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
+        } catch (Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        return c;
+    }
 }

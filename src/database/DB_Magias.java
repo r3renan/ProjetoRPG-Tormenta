@@ -3,21 +3,10 @@ package database;
 import java.sql.*;
 import java.util.ArrayList;
 import parser.Magia;
+import static database.Database.connect;
 
 
 public class DB_Magias {
-    
-    private static Connection connect(){
-        Connection c = null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-        } catch (Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
-        
-        return c;
-    }
     
     public static void gerarTableMagias(){
         Connection c = connect();

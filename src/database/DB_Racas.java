@@ -1,19 +1,9 @@
 package database;
 
+import static database.Database.connect;
 import java.sql.*;
 
 public class DB_Racas {
-    private static Connection connect(){
-        Connection c = null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-        } catch (Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
-        
-        return c;
-    }
     
     public static void gerarTableRacas(){
         Connection c = connect();
