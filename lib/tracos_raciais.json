@@ -157,5 +157,29 @@
 {
 	"raca" : "Minotauro",
 	"traco" : "Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "+4 Carisma, +2 Inteligência, –2 Sabedoria. Qareen são atraentes, simpáticos e brilhantes, embora um pouco ingênuos."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "+4 em testes de Identifi car Magia. A natureza mágica dos meio-gênios faz com que eles entendam melhor o funcionamento da magia."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Desejos. Sempre que um qareen conjura uma magia arcana a pedido de outra pessoa, ele gasta –1 ponto de magia (mínimo 1 PM). Ele só pode usar esta habilidade se ainda tiver pelo menos 1 PM restante. “Fazer um desejo” ao meio-gênio é uma ação livre. Em combate, isso significa que o qareen deve aguardar pela iniciativa de quem fez o pedido para poder conjurar a magia (que tem tempo de conjuração normal). O qareen não tem a obrigação de conjurar magias contra a própria vontade, mesmo que alguém peça."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Pequenos desejos. Mesmo que não pertença a uma classe conjuradora, um qareen pode conjurar todos os truques (magias arcanas de nível 0) presentes neste livro, como um feiticeiro de mesmo nível. No entanto, ele só pode conjurar estes truques quando outra pessoa pede."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Uma vez por dia, um qareen pode conjurar vôo como um feiticeiro de mesmo nível, sem gastar pontos de magia."
+},
+{
+	"raca" : "Qareen",
+	"traco" : "Conforme sua descendência, um qareen tem resistência especial contra as seguintes formas de ataque: Água: resistência a frio e ácido 5. Ar: resistência a eletricidade e sônico 5. Fogo: resistência a fogo 5. Terra: redução de dano 3/cortante ou per furante. Luz: resistência a eletricidade 8. Trevas: resistência a ácido e energia negativa 5. “Energia negativa” é provocada por efeitos e magias necromânticos (como infl igir ferimentos)."
 }
 ]
