@@ -2,6 +2,7 @@ package database;
 
 import static database.Database.connect;
 import java.sql.*;
+import parser.Raca;
 
 public class DB_Racas {
     
@@ -38,6 +39,44 @@ public class DB_Racas {
             
         } catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+        }
+    }
+    
+    public static void inserir(Raca raca){
+        Connection c = connect();
+        
+        String sql = "INSERT INTO RACAS VALUES("
+                + "NULL,"
+                + "'" + raca.getNome() + "'"
+                + "'" + raca.getResumo() + "'"
+                + "'" + raca.getPersonalidade() + "'"
+                + "'" + raca.getAparencia() + "'"
+                + "'" + raca.getRelacoes() + "'"
+                + "'" + raca.getTendencia() + "'"
+                + "'" + raca.getTerra() + "'"
+                + "'" + raca.getReligiao() + "'"
+                + "'" + raca.getNomes() + "'"
+                + "'" + raca.getAventuras() + "'"
+                + "'" + raca.getIdiomas() + "'"
+                + "'" + raca.getAj_forca() + "'"
+                + "'" + raca.getAj_destreza() + "'"
+                + "'" + raca.getAj_constituicao() + "'"
+                + "'" + raca.getAj_sabedoria() + "'"
+                + "'" + raca.getAj_inteligencia() + "'"
+                + "'" + raca.getAj_carisma() + "'"
+                + "'" + raca.getAj_distributivo() + "'"
+                + "'" + raca.getQuant_status() + "')";
+        
+        try {
+            Statement s = c.createStatement();
+            s.executeUpdate(sql);
+            s.close();
+            c.close();
+            
+            System.out.println("Raca " + raca.getNome() + " cadastrada com sucesso.");
+            
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
     }
 }

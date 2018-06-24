@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import parser.Magia;
-import static database.DB_Magias.gerarArrayMagias;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -16,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import static database.DB_Magias.consultar;
+import static database.Database.queryConsulta;
 
 public class TelaConsultarMagiasController implements Initializable {
 
@@ -137,7 +137,7 @@ public class TelaConsultarMagiasController implements Initializable {
             query = query + "AND FONTE LIKE '%" + boxFonte.getValue() + "%'";
         }
         
-        listarMagias(gerarArrayMagias(query));
+        listarMagias(queryConsulta(query));
         
     }
     
@@ -154,7 +154,7 @@ public class TelaConsultarMagiasController implements Initializable {
         
         //Inicializar lista com todas as magias
         String query = "SELECT NOME FROM MAGIAS";
-        ArrayList<String> nomeMagias = gerarArrayMagias(query);
+        ArrayList<String> nomeMagias = queryConsulta(query);
         listarMagias(nomeMagias);
         
         //Popular opções nas caixas de seleção de busca e definir valor padrão como nulo
