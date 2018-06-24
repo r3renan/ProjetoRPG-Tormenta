@@ -51,7 +51,51 @@
 	"traco" : "Elfos sabem usar espadas curtas, espadas longas, floretes e arcos (curtos, longos e compostos). Elfos também recebem Foco em Arma para uma destas armas (à escolha do jogador) como um talento adicional"
 },
 {
-	"raca" : 
+	"raca" : "Goblin",
+	"traco" : "+4 Destreza, +2 Constituição, –2 Carisma. Goblins são ágeis e resistentes, mas também rudes."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Tamanho Pequeno. Goblins recebem classe de armadura +1, +1 nas jogadas de ataque e +4 em testes de Furtividade, mas precisam usar armas menores."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Deslocamento 9m. Apesar de pequenos, goblins são rápidos. Sua velocidade é a mesma de criaturas Médias."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "Visão no Escuro. Goblins (assim como outros goblinóides) podem enxergar no escuro a até 18 metros,apenas em preto e branco. Um goblin ignora camufl agem (incluindo camuflagem total) por escuridão."
+},
+{
+	"raca" : "Goblin",
+	"traco" : "+4 em testes de Fortitude contra doenças e venenos. Goblins também não precisam fazer testes de Fortitude por ingerir comida estragada"
+},
+{
+	"raca" : "Goblin",
+	"traco" : "+4 em testes de Ladinagem e Oficio (um à escolha do jogador). Goblins estão acostumados a roubar para viver, e têm aptidão natural para engenhocas"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+4 Destreza, +2 Carisma, –2 Força. Halflings são acrobáticos e cativantes, mas fi sicamente fracos."
+},
+{
+	"raca" : "Halfling",
+	"traco" : "Tamanho Pequeno. Halflings recebem classe de armadura +1, +1 nas jogadas de ataque e +4 em testes de Furtividade, mas precisam usar armas menores."
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+2 em todos os testes de resistência, por sua sorte incrível"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+1 em jogadas de ataque com armas de arremesso e fundas. O arremesso de pedras é um esporte popular da raça"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "Para halflings a perícia Atletismo é baseada em Destreza, não em Força"
+},
+{
+	"raca" : "Halfling",
+	"traco" : "+4 em testes de Enganação. Ninguém desconfia de halflings."
 }
-
 ]
