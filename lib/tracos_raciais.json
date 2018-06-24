@@ -97,5 +97,20 @@
 {
 	"raca" : "Halfling",
 	"traco" : "+4 em testes de Enganação. Ninguém desconfia de halflings."
+},
+{
+	"raca" : "Humano",
+	"traco" : "+2 em duas habilidades à escolha do jogador."
+},
+{
+	"raca" : "Humano",
+	"traco" : "2 talentos adicionais à escolha do jogador"
+},
+{
+	"raca" : "Humano",
+	"traco" : "2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe."
+},
+{
+	"raca" : 
 }
 ]
