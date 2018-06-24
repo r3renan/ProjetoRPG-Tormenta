@@ -111,6 +111,51 @@
 	"traco" : "2 perícias treinadas extras, que não precisam ser escolhidas entre suas perícias de classe."
 },
 {
-	"raca" : 
+	"raca" : "Lefou",
+	"traco" : "+2 em duas habilidades à escolha do jogador (exceto Carisma), –4 Carisma. Lefou têm habilidades acima da média, mas também problemas de identidade e difi culdade em situações sociais."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Monstro. Um lefou não é considerado humano ou humanóide, sendo imune a magias e efeitos que afetam apenas estas criaturas."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Visão no escuro. Um lefou ignora camuflagem (incluindo camuflagem total) por escuridão. Lefou enxergam normalmente no escuro, embora apenas em preto e branco."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "2 talentos da Tormenta adicionais. O lefou não perde pontos de Carisma por estes talentos (mas perde se adquirir outros)."
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Deformidade. Todo lefou tem algum defeito físico que, embora desagradável aos olhos, confere certa vantagem. O jogador deve escolher uma entre as seguintes. Articulações fl exíveis: +4 em testes de Acrobacia. Dedos rígidos: deslocamento de escalada 4,5m. Dentes afi ados: +4 em testes de Intimidação. Mãos membranosas: deslocamento de natação 4,5m. Olhos vermelhos: +4 em testes de Percepção (apenas para observar). Pele rígida: classe de armadura +1"
+},
+{
+	"raca" : "Lefou",
+	"traco" : "Afinidade com a Tormenta. Um lefou jamais recebe níveis negativos devido a efeitos causados pela Tormenta ou seus habitantes. Ele ainda pode receber níveis negativos de outras formas."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "+4 Força, +2 Constituição, –2 Carisma. Minotauros são fortes e resistentes, mas também arrogantes e teimosos."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Classe de armadura +1. Minotauros têm couro rígido"
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Minotauros possuem um ataque natural de chifres (1d6, crítico x2, perfuração). Um minotauro pode realizar um ataque adicional por rodada com os chifres, mas provoca uma penalidade de –4 em todos os ataques (incluindo este)."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Faro. Minotauros recebem +4 em testes de Sobrevivência para rastrear usando o faro, e também detectam automaticamente a presença de criaturas a até 9m."
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Lógica labiríntica. Minotauros têm excelente senso de direção, e recebem +8 em testes de Sobrevivência para não se perder"
+},
+{
+	"raca" : "Minotauro",
+	"traco" : "Medo de altura. Caso tenha que subir qualquer altura superior a 3m (ou se estiver a até 3m de uma queda desta altura), um minotauro sofre penalidade de –4 em suas jogadas e testes. Ele também não pode realizar nenhuma ação que dependa de concentração, como conjurar magias."
 }
 ]
