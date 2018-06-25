@@ -27,7 +27,7 @@ public class TABLE_Magias {
         System.out.println("Tabela MAGIAS gerada com sucesso.");
     }
     
-    public static void inserir(Magia magia){ //TODO
+    public static void inserir(Magia magia){
         String sql = "INSERT INTO MAGIAS VALUES("
                     + "NULL,"
                     + "'" + magia.getNome() + "',"

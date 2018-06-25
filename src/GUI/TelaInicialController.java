@@ -39,6 +39,7 @@ public class TelaInicialController implements Initializable {
         try{
             ParserJSON.cadastrarMagias();
             ParserJSON.cadastrarRacas();
+            ParserJSON.cadastrarTracosRaciais();
         } catch(Exception e){
             System.err.print(e.getClass().getName() + ": " + e.getMessage());
         }

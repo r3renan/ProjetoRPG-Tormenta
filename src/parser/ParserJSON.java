@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import database.TABLE_Magias;
 import database.TABLE_Racas;
+import database.TABLE_TracosRaciais;
 import java.io.FileReader;
 import java.util.ArrayList;
 
@@ -24,6 +25,15 @@ public class ParserJSON{
         
         for (Raca raca : racas){
             TABLE_Racas.inserir(raca);
+        }
+    }
+    
+    public static void cadastrarTracosRaciais() throws Exception{
+        JsonReader reader = new JsonReader(new FileReader("lib/tracos_raciais"));
+        ArrayList<TracoRacial> tracosRaciais = new Gson().fromJson(reader, new TypeToken<ArrayList<TracoRacial>>() {}.getType());
+        
+        for (TracoRacial tracoRacial : tracosRaciais){
+            TABLE_TracosRaciais.inserir(tracoRacial);
         }
     }
 }
