@@ -46,9 +46,9 @@ public class TABLE_Magias {
         System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
     }
     
-    public static Magia consultar(String retorno, String busca){
+    public static Magia consultar(String coluna, String busca){
         Connection c = connect();
-        String sql = "SELECT " + retorno + " FROM MAGIAS";
+        String sql = "SELECT " + coluna + " FROM MAGIAS";
         if (busca != null){
             sql = sql + " WHERE " + busca;
         }

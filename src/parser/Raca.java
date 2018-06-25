@@ -25,7 +25,7 @@ public class Raca {
     private int aj_distributivo;
     private int quant_status;
     
-    Raca(ResultSet dados) throws Exception {
+    public Raca(ResultSet dados) throws Exception {
         ID = dados.getInt("ID");
         nome = dados.getString("NOME");
         resumo = dados.getString("RESUMO");
