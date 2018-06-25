@@ -17,6 +17,15 @@ public class TABLE_Pericias {
     }
     
     public static void inserir(Pericia pericia){
+        String sql = "INSERT INTO PERICIAS VALUES("
+                + "NULL,"
+                + "'" + pericia.getNome() + "',"
+                + "'" + pericia.getDescricao() + "',"
+                + "'" + pericia.getHabilidade_chave() + "',"
+                + "'" + pericia.getPenalidade_armadura() + "',"
+                + "'" + pericia.getTreinada() + ")";
         
+        executarUpdate(sql);
+        System.out.println("Pericia " + pericia.getNome() + " inserida com sucesso.");
     }
 }

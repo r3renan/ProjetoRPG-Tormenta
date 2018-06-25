@@ -67,9 +67,11 @@ public class TelaInicialController implements Initializable {
     @FXML
     private void criarDB(ActionEvent event) throws Exception{
         try{
-            ParserJSON.cadastrarMagias();
-            ParserJSON.cadastrarRacas();
-            ParserJSON.cadastrarTracosRaciais();
+            //ParserJSON.cadastrarMagias();
+            //ParserJSON.cadastrarRacas();
+            //ParserJSON.cadastrarTracosRaciais();
+            //ParserJSON.cadastrarPericias();
+            ParserJSON.cadastrarManobras();
         } catch(Exception e){
             System.err.print(e.getClass().getName() + ": " + e.getMessage());
         }
