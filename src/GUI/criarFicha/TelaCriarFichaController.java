@@ -22,7 +22,7 @@ import parser.Ficha;
 public class TelaCriarFichaController implements Initializable {
         
     @FXML
-    private Label textoDado, textoRolagens, modForca, modDestreza, modConstituicao, modInteligencia, modSabedoria, modCarisma;
+    private Label textoDado, textoRolagens, raca, classe, modForca, modDestreza, modConstituicao, modInteligencia, modSabedoria, modCarisma;
     
     @FXML
     private Button btnClasses, btnRacas, btnDado, btnNext;
@@ -80,8 +80,8 @@ public class TelaCriarFichaController implements Initializable {
         scene.setRoot(loader.load());    */
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void preencherCampos(){
+        System.out.println("Ficha ID: " + ficha_id);
         Connection c = connect();
         String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
         
@@ -89,17 +89,24 @@ public class TelaCriarFichaController implements Initializable {
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
             ficha = new Ficha(result);
+            campoForca.setText(Integer.toString(ficha.getForca()));
+            campoDestreza.setText(Integer.toString(ficha.getDestreza()));
+            campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
+            campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
+            campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
+            campoCarisma.setText(Integer.toString(ficha.getCarisma()));
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }    
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        try {
+            preencherCampos();
+        } catch(Exception e){
+            System.out.println(e.getClass().getName() + ": " + e.getMessage());
         }
-        
-        campoForca.setText(Integer.toString(ficha.getForca()));
-        campoDestreza.setText(Integer.toString(ficha.getDestreza()));
-        campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
-        campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
-        campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
-        campoCarisma.setText(Integer.toString(ficha.getCarisma()));
-        
-        // TODO
+            
     }    
 }

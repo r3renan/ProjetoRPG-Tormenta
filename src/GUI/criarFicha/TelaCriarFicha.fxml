@@ -122,7 +122,7 @@
                               <TextField fx:id="campoInteligencia" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                               <TextField fx:id="campoSabedoria" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                               <TextField fx:id="campoCarisma" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                              <Label text="NÃO SELECIONADA" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Label fx:id="raca" text="NÃO SELECIONADA" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="40.0" />
                                  </GridPane.margin>
@@ -130,7 +130,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Label text="A IMPLEMENTAR" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Label fx:id="classe" text="NÃO SELECIONADA" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="40.0" />
                                  </GridPane.margin>

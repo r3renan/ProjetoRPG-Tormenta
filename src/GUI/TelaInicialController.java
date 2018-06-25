@@ -43,21 +43,14 @@ public class TelaInicialController implements Initializable {
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
-        TelaCriarFichaController controller = loader.getController();
+        Parent root = loader.load();
         
-        try {
-            System.out.println("OI");
-            System.out.println("Ficha " + ficha_id);
-            controller.setFicha_id(ficha_id);
-            System.out.println("FALA");
-            Scene novaScene = new Scene(loader.load(), 1000, 690);
-            System.out.println("EAE");
-            stage.setScene(novaScene);
-            System.out.println("HEHE");
-        } catch(Exception e){
-            //System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            e.printStackTrace();
-        }
+        TelaCriarFichaController controller = loader.getController();
+        controller.setFicha_id(ficha_id);
+        controller.preencherCampos();
+        
+        Scene novaScene = new Scene(root, 1000, 690);
+        stage.setScene(novaScene);
     }
     
     @FXML
