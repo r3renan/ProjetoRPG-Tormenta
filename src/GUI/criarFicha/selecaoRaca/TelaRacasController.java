@@ -99,6 +99,7 @@ public class TelaRacasController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        lista.setStyle("-fx-font-size: 1.5em;");
         String query = "SELECT NOME FROM RACAS";
         ArrayList<String> racas = queryConsulta(query);
         System.out.println(racas);

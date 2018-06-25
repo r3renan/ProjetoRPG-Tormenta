@@ -46,11 +46,17 @@
                               <Insets top="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="nome" GridPane.columnIndex="1" />
+                        <Label fx:id="nome" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                         <Label fx:id="resumo" textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets top="10.0" />
-                           </GridPane.margin></Label>
+                           </GridPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
                      </children>
                   </GridPane>
                   <Button fx:id="btnPersonalidade" layoutX="50.0" layoutY="198.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirPersonalidade" text="Personalidade" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="350.0">
