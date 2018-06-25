@@ -1,14 +1,154 @@
 [
 {
 	"nome" : "Acrobacia",
-	"descricao" : "Você consegue andar na corda bamba, cair sem se machucar e fazer outras proezas acrobáticas.",
+	"descricao" : "Você consegue andar na corda bamba, cair sem se machucar e fazer outras proezas acrobáticas. As manobras amortecer queda, cambalhota, levantar-serapidamente e passar por espaço apertado só podem ser tentadas se você é treinado em Acrobacia.",
 	"habilidade_chave" : "Destreza",
-	"penalidade" : "Armadura",
+	"penalidade_armadura" : "sim",
+	"treinada" : "não",
 },
 {
-	"nome" : "",
-	"descricao" : "",
-	"habilidade_chave" : "",
-	"penalidade" : "",	
+	"nome" : "Adestrar Animais",
+	"descricao" : "Você pode conduzir cavalos puxando uma carroça, treinar um cão de guarda e realizar outras tarefas relacionadas a animais.",
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",
+	"treinada" : "sim",	
 }
+
+{
+	"nome" : "Atletismo",
+	"descricao" : "Esta perícia é utilizada para realizar façanhas atléticas, como correr rápido, escalar montanhas, nadar em águas revoltas e pular sobre desfiladeiros.",
+	"habilidade_chave" : "Força",
+	"penalidade_armadura" : "sim",	
+	"treinada" : "não",	
+
+}
+
+{
+	"nome" : "Atuação",
+	"descricao" : "Você pode impressionar uma platéia com sua música, canto, poesia ou outra manifestação artística. Assim como Conhecimento e Ofício, Atuação na verdade são várias perícias diferentes. Você pode ser treinado em várias perícias de Atuação, cada uma escolhida como uma perícia separada. • Dramaturgia (comédia, drama, mímica). • Dança (balé, dança do ventre, valsa). • Música (bandolim, canto, flauta, harpa, tambor, piano). • Oratória (discursos, poesia). Seu desempenho como artista depende do resultado de seu teste: 15 para uma performance rotineira (o mínimo necessário para que não joguem tomates...), 25 para uma grande atuação e 35 para um espetáculo inesquecível, capaz de agradar aos reis!",	
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",
+}
+
+{
+	"nome" : "Cavalgar",
+	"descricao" : "Você sabe conduzir animais treinados para montaria, como cavalos, grifos e trobos. Coisas simples não exigem testes. Você pode colocar uma sela, montar, cavalgar em velocidade normal e desmontar do animal sem problemas. Apenas situações de combate ou perigo exigem testes. Animais não domesticados, ou não adequados como montaria, impõem uma penalidade de –5 em testes de Cavalgar.",
+	"habilidade_chave" : "Destreza",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Conhecimento",
+	"descricao" : "Esta perícia representa o estudo de algum tipo de assunto, possivelmente uma disciplina acadêmica ou científica. Assim como Atuação e Ofício, Conhecimento na verdade são várias perícias diferentes. Você pode ser treinado em várias perícias de Conhecimento, cada uma escolhida como uma perícia separada. • Arcano (mistérios sobrenaturais, tradições mágicas, símbolos arcanos, frases crípticas, construtos, dragões). • Engenharia (castelos, pontes, cavernas). • Geografia (terrenos, climas, povos). • História (datas importantes, lendas, tradições). • Natureza (animais, fadas, plantas, estações e ciclos). • Nobreza (linhagens, heráldica, cavalaria, personalidades, leis). • Religião (deuses do Panteão, deuses menores, tradições eclesiásticas, símbolos sagrados, espíritos, mortos-vivos).",
+	"habilidade_chave" : "Inteligência",
+	"penalidade_armadura" : "não",	
+	"treinada" : "sim",	
+}
+
+{
+	"nome" : "Cura",
+	"descricao" : "Você pode tratar de ferimentos, doenças e venenos.",
+	"habilidade_chave" : "Sabedoria",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Diplomacia",
+	"descricao" : "Você pode negociar por melhores acordos, ou dialogar para mudar a opinião de outras pessoas.",
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Enganação",
+	"descricao" : "Você engana pessoas com mentiras, falsifi cações e disfarces.",
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",
+	"treinada" : "não",		
+}
+
+{
+	"nome" : "Furtividade",
+	"descricao" : "Você pode desaparecer nas sombras, andar sem fazer barulho, sumir na multidão, seguir alguém sem ser notado...; Faça um teste de Furtividade opostos pelos testes de Percepção daqueles que poderiam notá-lo. Você não é percebido pelas pessoas contra as quais tenha sido bem-sucedido. Usar furtividade exige algum tipo de cobertura ou camuflagem entre você e seus alvos. Ou então seus alvos devem estar de costas ou atentos a outra coisa. Ou ainda, deve haver outras pessoas em cena com as quais você consiga se misturar (para sumir na multidão ou seguir alguém nas ruas, por exemplo). Você deve fi car parado ou se mover lentamente, com metade do deslocamento (ou então com a mesma velocidade das pessoas em volta, se houver). Em deslocamento normal você sofre –5 em seu teste, e –20 em corrida ou investida. Um teste de Furtividade numa rodada em que você ataque também sofre penalidade de –20. Você não pode fazer um teste de Furtividade contra alguém que esteja olhando diretamente para você — mesmo que se esconda atrás de algo, o observador saberá que você está ali. No entanto, você pode usar um blefe (veja a perícia Enganação) para criar uma distração e, em caso de sucesso, tentar se esconder. Usar esta perícia é parte de sua ação de movimento.",
+	"habilidade_chave" : "Destreza",
+	"penalidade_armadura" : "sim",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Identificar Magia",
+	"descricao" : "Esta perícia envolve o conhecimento e manipulação de magia e itens mágicos.",
+	"habilidade_chave" : "Inteligência",
+	"penalidade_armadura" : "não",	
+	"treinada" : "sim",	
+}
+
+{
+	"nome" : "Iniciativa",
+	"descricao" : "Esta perícia, muito importante em combate, determina sua velocidade de reação em situações de perigo.",
+	"habilidade_chave" : "Destreza",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Intimidação",
+	"descricao" : "Você pode forçar outros a obedecê-lo através de ameaças, coação, ou apenas fazendo cara feia. Com um teste bem-sucedido, você obriga alguém a fazer algo ou se comportar de determinada maneira. O teste de Intimidação é oposto ao teste de Vontade da pessoa ameaçada. Quaisquer modificadores da vítima contra efeitos de medo também se aplicam ao teste de Vontade (por exemplo, se está sendo inspirada por um bardo). Personagens imunes a medo (como paladinos) não podem ser intimidados. Em caso de sucesso, a vítima colabora enquanto estiver em sua presença, e por mais 1d6x10 minutos. Depois desse tempo ela se torna inamistosa, ou até hostil. Se você falha no teste por 5 ou mais, a vítima não obedece — ou faz o oposto do ordenado.",
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Intuição",
+	"descricao" : "Você pode usar seu “sexto sentido” para não ser enganado e perceber uma situação estranha. Use esta perícia para coisas que não poderiam ser percebidas através dos sentidos normais (isto é, com a perícia Percepção).",
+	"habilidade_chave" : "Sabedoria",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Ladinagem",
+	"descricao" : "Com mãos leves e mente suja, você sabe exercer as tarefas “profi ssionais” de um ladrão.",
+	"habilidade_chave" : "Destreza",
+	"penalidade_armadura" : "sim",	
+	"treinada" : "sim",	
+}
+
+{
+	"nome" : "Obter Informação",
+	"descricao" : "Você pode fazer contatos, ouvir os rumores locais e descobrir informações específi cas — como a localização de uma masmorra ou o esconderijo de um bandido. Usar esta perícia exige um dia inteiro, e algumas moedas para gastar em bebidas. A difi culdade do teste, assim como o dinheiro que vai gastar, dependem da informação que você quer descobrir. Informações gerais ('Quem é o guerreiro mais forte da aldeia?') têm CD 10 e custam 1d6 TO. Informações específi cas ('Quem é o ancião que está sempre ao lado do rei?') têm CD 15 e custam 1d10 TO. Informações restritas, que poucas pessoas conhecem ('O que fazem naquela torre misteriosa?'), têm CD 20 e custam 3d6 TO. Por fi m, informações protegidas, que podem colocar em risco quem responder à pergunta (“Quem é o líder da guilda dos ladrões?”), têm CD 25 e custam 3d10 TO. Você pode pagar o dobro do dinheiro (mas tem que fazer a escolha antes da quantia ser rolada) para um bônus de +2 no teste.",
+	"habilidade_chave" : "Carisma",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Ofício",
+	"descricao" : "Esta perícia representa a prática de algum tipo de artesanato ou comércio. Assim como Atuação e Conhecimento, Ofício na verdade são várias perícias diferentes. Você pode ser treinado em várias perícias de Ofício, cada uma escolhida como uma perícia separada. A seguir estão alguns exemplos de Ofício. • Alquimia (ácidos, poções, venenos). • Alvenaria (itens e construções de pedra). • Carpintaria (itens e construções de madeira). • Joalheria (lapidação, pedras preciosas). • Metalurgia (armas, armaduras e itens de metal). • Uma arte, como escrita, escultura ou pintura. • Uma profi ssão, como cozinheiro, fazendeiro, pescador, estalajadeiro ou pastor. Esta perícia exige um kit de artesão. Sem ele, você sofre uma penalidade de –5 no teste.",
+	"habilidade_chave" : "Inteligência",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Percepção",
+	"descricao" : "Esta perícia é utilizada para perceber coisas através dos sentidos — normalmente visão ou audição, embora outras criaturas possam contar com sentidos diferentes.",
+	"habilidade_chave" : "Sabedoria",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
+{
+	"nome" : "Sobrevivência",
+	"descricao" : "Você pode caçar animais, guiar um grupo através dos ermos ou reconhecer e evitar perigos da natureza. Você é capaz de determinar onde está, e manter a si mesmo e seus companheiros alimentados em áreas selvagens. Um teste bem sucedido por dia garante a sobrevivência de um pequeno grupo (você e mais quatro ou cinco pessoas). A difi culdade depende do tipo de ambiente: CD 15 para fl orestas e áreas costeiras; CD 20 para montanhas ou pântanos, e CD 25 para desertos ou outras regiões áridas e estéreis. Se você tem o talento Rastrear, pode usar Sobrevivência para reconhecer e seguir rastros.",
+	"habilidade_chave" : "Sabedoria",
+	"penalidade_armadura" : "não",	
+	"treinada" : "não",	
+}
+
 ]

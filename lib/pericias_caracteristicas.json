@@ -3,7 +3,7 @@
 	"pericia_ref" : "Acrobacia",
 	"nome" : "Amortecer queda",
 	"descricao" : "você pode reduzir o dano de uma queda para 1,5m menos que a altura real, como uma reação",
-	"cooldown" : "CD 15"
+	"classe_dificuldade" : "CD 15"
 },
 {
 	"pericia_ref" : "Acrobacia",
@@ -24,18 +24,430 @@
 	"pericia_ref" : "Acrobacia",
 	"nome" : "Levantar-se rapidamente",
 	"descricao" : "caso esteja caído, você pode fi car de pé como uma ação livre. Se falhar por 5 ou mais, você perde uma ação de movimento e continua caído.",
-	"cooldown" : "CD 20"
+	"classe_dificuldade" : "CD 20"
 },
 {
 	"pericia_ref" : "Acrobacia",
 	"nome" : "Passar por espaço apertado",
-	"descricao" : "você pode rastejar por espaços estreitos, sufi cientes para criaturas uma categoria de tamanho menor (por exemplo, um humano poderia passar por umespaço sufi ciente apenas para um goblin), como uma ação completa. Nesta condição você se move com metade da velocidade normal. As manobras amortecer queda, cambalhota, levantar-se rapidamente e passar por espaço apertado só podem ser tentadas se você é treinado em Acrobacia",
-	"cooldown" : "CD 30"
+	"descricao" : "você pode rastejar por espaços estreitos, sufi cientes para criaturas uma categoria de tamanho menor (por exemplo, um humano poderia passar por umespaço sufi ciente apenas para um goblin), como uma ação completa. Nesta condição você se move com metade da velocidade normal." ,
+	"classe_dificuldade" : "CD 30"
 }
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{
+	"pericia_ref" : "Adestrar Animais",
+	"nome" : "Domesticar um animal selvagem",
+	"descricao" : "você pode criar um animal selvagem desde fi lhote, domesticando-o. O tempo necessário varia de acordo com a criatura.",
+	"classe_dificuldade" : "CD 25:"
+}
+
+{
+	"pericia_ref" : "Adestrar Animais",
+	"nome" : "Ensinar um truque",
+	"descricao" : "você pode ensinar um truque (atacar, atuar, fi car, guardar, pegar, procurar, proteger, quieto, rosnar, seguir, vir...) com um teste e uma semana de treino. Um animal com Inteligência 1 pode aprender no máximo três truques, enquanto um animal com Int 2 aprende até seis truques (criaturas com Int 3 ou mais são seres inteligentes).",
+	"classe_dificuldade" : "CD 15"
+}
+
+{
+	"pericia_ref" : "Adestrar Animais",
+	"nome" : "Forçar um animal",
+	"descricao" : "você pode forçar um animal a executar um truque que ele não sabe, mas é fi sicamente capaz de realizar. Este uso gasta uma ação completa e, em caso de sucesso, o animal realiza o truque na sua próxima ação.",
+	"classe_dificuldade" : "CD 25"
+}
+
+{
+	"pericia_ref" : "Adestrar Animais",
+	"nome" : "Manejar um animal",
+	"descricao" : "você pode comandar um animal para que realize um truque que ele já sabe. Este uso gasta uma ação padrão e, em caso de sucesso, o animal realiza o truque na sua próxima ação. Você pode fazer este uso mesmo sem treinamento em Adestrar Animais.",
+	"classe_dificuldade" : "CD 10"
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{
+	"pericia_ref" : "Atletismo",
+	"nome" : "Corrida",
+	"descricao" : "você pode correr mais rapidamente gastando uma ação completa. Sua velocidade é aumentada em 1,5m vezes o resultado de seu teste. Por exemplo, se um humano obtém um resultado 24, vai se mover 45m (24 x 1,5m + 9m) naquela rodada. Você só pode correr em linha reta, e não pode correr através de terreno difícil. Você pode manter a corrida durante um número de rodadas igual a seu valor de Constituição. Após isso, deve fazer um teste de Constituição (CD 10 +1 por teste anterior) por rodada para continuar correndo. Se falhar, precisa parar e descansar um minuto antes correr novamente.",
+	"classe_dificuldade" : "Veja texto."
+}
+
+{
+	"pericia_ref" : "Atletismo",
+	"nome" : "Escalar",
+	"descricao" : "você pode subir em árvores, muros, encostas escarpadas e outras superfícies inclinadas. Faça um teste sempre que executar uma ação de movimento em superfície inclinada ou vertical. Em caso de sucesso você avança metade da sua velocidade, ou se mantém no lugar (caso esteja fazendo outra coisa). Se falhar, não consegue executar a ação de movimento. E se falhar por 5 ou mais você cai da altura que tinha alcançado. A difi culdade depende das condições da escalada: CD 5 para uma encosta íngreme, CD 10 para um muro com ajuda de uma corda, CD 15 para uma árvore, CD 20 para um muro com algumas reentrâncias ou CD 25 para uma parede muito lisa, quase sem apoios. Você precisa ter as duas mãos livres para escalar. Pode se apoiar com uma mão para fazer uma ação que use apenas uma mão, mas não pode avançar assim. Como não pode se mexer para evitar um ataque, você é considerado desprevenido quando está escalando.Toda vez que sofre dano quando está escalando, deve fazer um novo teste de Atletismo; em caso de falha você cai.",
+	"classe_dificuldade" : "Veja texto."
+}
+
+{
+	"pericia_ref" : "Atletismo",
+	"nome" : "Natação",
+	"descricao" : "você pode nadar, mergulhar e se desviar de obstáculos submersos. Cada rodada na água exige uma ação de movimento e um teste de Atletismo (CD 10 para água calma, 15 para agitada, 20 para tempestuosa). Em caso de sucesso você avança metade de sua velocidade. Se falhar no teste você consegue boiar, mas não avançar; e se falhar por 5 ou mais você afunda. Você pode gastar uma segunda ação de movimento na mesma rodada para outro teste de Atletismo. Capítulo 4: Perícias 82 Se estiver submerso (porque falhou no teste ou mergulhou intencionalmente), deve prender a respiração. Você pode prender a respiração por uma quantidade de rodadas igual a seu valor de Constituição. Esgotado esse tempo, deve fazer um teste de Constituição por rodada (CD 10 +1 por cada teste anterior). Se falhar, se afoga (é reduzido a 0 pontos de vida). Se continuar submerso, na próxima rodada vai para –1 PV. Na rodada seguinte, morre.",
+	"classe_dificuldade" : "Veja texto."
+}
+
+
+{
+	"pericia_ref" : "Atletismo",
+	"nome" : "Saltar",
+	"descricao" : "você pode pular sobre buracos ou obstáculos, ou alcançar algo elevado. Para um salto longo, CD 10 para 1,5m; 15 para 3m; 20 para 4,5m; 25 para 6m e assim por diante. Para um salto em altura, CD 10 para 50cm; 20 para 1m; 30 para 1,5m e assim por diante. Você deve ter pelo menos 6m para correr e pegar impulso (sem esse espaço, a CD aumenta em +10). Ao pular de um lugar elevado, um teste de Atletismo (CD 15) reduz em 1d6 o dano da queda. Saltar é parte de seu movimento, e não exige uma ação.",
+	"classe_dificuldade" : "Veja texto."
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{
+	"pericia_ref" : "Cavalgar",
+	"nome" : "Montar ou desmontar rapidamente",
+	"descricao" : "você pode montar ou desmontar como uma ação livre (o normal é gastar uma ação de movimento). Se falhar por 5 ou mais, você cai no chão.",
+	"classe_dificuldade" : "CD 20"
+}
+
+
+{
+	"pericia_ref" : "Cavalgar",
+	"nome" : "Cavalgar rapidamente",
+	"descricao" : "com uma ação de movimento, você consegue esporear sua montaria e aumentar seu deslocamento em +3m durante uma rodada. Esta manobra causa 2 pontos de dano à montaria.",
+	"classe_dificuldade" : "CD 15"
+}
+
+
+{
+	"pericia_ref" : "Cavalgar",
+	"nome" : "Guiar com os joelhos",
+	"descricao" : "com uma ação livre você consegue guiar sua montaria apenas com os joelhos, deixando as mãos livres para lutar, durante uma rodada. Se falhar, precisa usar pelo menos uma mão guiar a montaria, ou deixá-la parada durante esta rodada.",
+	"classe_dificuldade" : "CD 10"
+}
+
+
+{
+	"pericia_ref" : "Cavalgar",
+	"nome" : "Permanecer na sela",
+	"descricao" : "se você ou sua montaria sofrem dano, você deve realizar um teste de Cavalgar (CD igual ao dano sofrido) como uma ação livre. Se falhar, você cai e sofre 1d6 pontos de dano.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+{
+	"pericia_ref" : "Cavalgar",
+	"nome" : "Saltar",
+	"descricao" : "você faz sua montaria saltar um obstáculo. Se você falhar, cai da montaria durante o salto e sofre 1d6 pontos de dano (ou mais, dependendo do obstáculo...). Este uso da perícia é parte do movimento da montaria, e não exige uma ação.",
+	"classe_dificuldade" : "CD 15"
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{
+	"pericia_ref" : "Conhecimento",
+	"nome" : "Decifrar escrita",
+	"descricao" : "um teste pode decifrar inscrições em idiomas antigos ou desconhecidos — como aqueles normalmente encontrados em masmorras — ou entender mensagens arcaicas ou incompletas. O texto deve estar ligado ao Conhecimento que você tem. CD 20 para mensagens e avisos simples, 25 para textos comuns e 30 para escritos intrincados, exóticos ou arcaicos. Cada sucesso equivale a uma página de texto e leva 1 minuto. Se falhar por 5 ou mais, você tira uma conclusão falsa a respeito do texto.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Conhecimento",
+	"nome" : "Entender mistério",
+	"descricao" : "como uma ação completa, você pode tentar desvendar um mistério que tinha ligação com seu tipo de Conhecimento. CD 10 para assuntos simples, 15 para normais, 20 a 30 para difíceis.",
+	"classe_dificuldade" : ""
+}
+
+
+{
+	"pericia_ref" : "Conhecimento",
+	"nome" : "Identificar criatura",
+	"descricao" : "você pode identificar uma criatura que tenha ligação com o Conhecimento escolhido (por exemplo, fadas para Conhecimento [natureza]), assim como seus poderes e vulnerabilidades, como uma ação completa. CD 10 + nível da criatura. Cada sucesso permite lembrar uma informação útil a respeito do monstro. Se falhar por 5 ou mais, tira uma conclusão errada (por exemplo, acreditar que determinado monstro é vulnerável a fogo, quando na verdade é vulnerável a frio).",
+	"classe_dificuldade" : ""
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Cura",
+	"nome" : "Primeiros socorros (",
+	"descricao" : "com uma ação padrão, você pode salvar outro personagem que esteja morrendo. Se ele está com 0 PV ou menos, um teste de Cura pode estabilizá-lo e fazer com que pare de perder pontos de vida.",
+	"classe_dificuldade" : "CD 15"
+}
+
+{
+	"pericia_ref" : "Cura",
+	"nome" : "Tratar doença",
+	"descricao" : "faça um teste contra a CD da doença. Em caso de sucesso, o paciente recebe +5 em seu próximo teste de Fortitude contra a doença. Você deve acompanhar o paciente pelo menos uma hora por dia para realizar este teste.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Cura",
+	"nome" : "Tratar veneno:",
+	"descricao" : "contra um veneno que não seja de efeito imediato, faça um teste com a mesma CD do veneno. Em caso de sucesso, o paciente recebe +5 em seu próximo teste de Fortitude contra o veneno. Este uso gasta uma ação padrão.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Diplomacia",
+	"nome" : "Barganha",
+	"descricao" : "comprando ou vendendo algo, você pode tentar barganhar. Você e o outro negociante fazem testes opostos de Diplomacia. Se ganhar, você muda o preço em 10% a seu favor. Se ganhar por 10 pontos de diferença ou mais, muda em 20%. Mas se perder por 5 ou mais, você ofende o negociante — ele não voltará a tratar com você durante pelo menos uma semana.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Diplomacia",
+	"nome" : "Mudar atitude",
+	"descricao" : "você pode mudar a atitude de alguém em uma categoria (veja adiante), para melhor ou pior, à sua escolha. Um teste de Diplomacia é oposto ao teste de Intuição do alvo. Normalmente a tentativa leva pelo menos minuto; em caso de urgência você pode tentar o mesmo como uma ação completa (para evitar uma briga, por exemplo), mas sofre penalidade de –10 no teste. Você pode mudar a atitude de alguém apenas uma vez por dia. Se você falhar por 5 ou mais, a atitude do alvo vai na direção contrária.	[(Atitude:  O alvo...)] - Hostil: Quer muito prejudicar o personagem, mesmo que precise se arriscar para isso. Pode atacar ou sabotar o personagem; Inamistoso: Deseja mal ao personagem, mas não a ponto de correr perigo. Pode enganar o personagem, criar intrigas sobre ele...; Indiferente: Não se importa com o personagem, vai tratá-lo normalmente; Amistoso: Deseja bem ao personagem, mas não se arriscará para ajudá-lo. Pode dar conselhos e fornecer ajuda limitada; Prestativo: Está disposto a ajudar, mesmo correndo perigo. Pode acompanhar e lutar ao lado do personagem.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Enganação",
+	"nome" : "Blefar",
+	"descricao" : "você pode levar outras pessoas a tirar conclusões erradas sobre algo ou alguém. Um teste de Enganação é oposto ao teste de Intuição da vítima. Circunstâncias positivas e negativas pesam muito no resultado de um blefe (veja o quadro). Um teste bem-sucedido de Enganação indica que o alvo reage como o personagem deseja, pelo menos por um breve período de tempo (1 rodada), ou acredita em algo que o personagem quer. Blefar gasta uma ação padrão. [Como Blefar] Aqui estão alguns exemplos de circunstâncias de Enganação e o modificador: • O alvo deseja acreditar no personagem (CD –5). 'Mas tenho certeza de que você deixou cair esta peça de ouro. Não é mesmo sua?' • O blefe é verossímil e não afetará muito o alvo (CD+0). 'Um ladrão goblin, você disse? Não, não vi ninguém assim passar por aqui.' • O blefe é um pouco difícil de acreditar ou colocará a vítima em perigo (CD+5). 'Rápido, preciso da sua espada! Vem vindo um orc nesta direção!' • O blefe é difícil de acreditar ou colocará a vítima em grande perigo (CD+10). 'Sim, entendo que seu mestre deixou você protegendo o laboratório, mas ele acaba de me pedir para apanhar sua bola de cristal aí dentro. Não vamos querer problemas com o mestre, certo?' • O blefe é muito fantástico; é quase impossível se acreditar nele (CD+20). 'Sim, foi o que eu disse! Aurakas foi substituído por um homem-serpente e agora governa em nome de Sszzaas! Temos que fazer alguma coisa!'",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Enganação",
+	"nome" : "Disfarce",
+	"descricao" : "com um pouco de maquiagem e alguns truques, você consegue mudar sua aparência ou a de outra pessoa. Faça um teste de Enganação contra um teste de Percepção de quem prestar atenção em você. Em caso de sucesso, a pessoa acredita em seu disfarce; caso contrário, percebe que há algo errado em sua aparência. Disfarces complexos impõem penalidades: –2 para sexo oposto, –2 para uma raça diferente, e –2 para idade muito diferente. Estas penalidades são cumulativas. Como é mais difícil fi ngir ser alguém conhecido, aqueles que conhecem essa pessoa recebem bônus em seus testes de Percepção: +2 se apenas conhece de vista, +5 para amigo, +10 para íntimo. Um disfarce exige pelo menos dez minutos e um kit de disfarces. Sem o kit, você sofre penalidade de –5 nos testes de Enganação para fazer um disfarce. ",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Enganação",
+	"nome" : "Falsificação",
+	"descricao" : "Faça um teste de Enganação contra um teste de Percepção de quem examina o documento falsifi cado. Em caso de sucesso, o examinador acredita que o documento é válido; caso contrário, ela percebe que é falso. Documentos complexos impõem penalidades: –2 para um documento desconhecido pelo falsifi cador; –2 para documentos complexos (como decretos reais ou ordens militares); –2 se inclui uma assinatura específi ca. Estas penalidades são cumulativas. Certas circunstâncias também modifi cam o teste do examinador: –2 se ele nunca viu um documento real; +2 se estiver habituado a ver esse tipo de documento; +2 ao analisar com muita atenção (por exemplo, guardas inspecionando criteriosamente os convites para uma festa restrita). Estes modificadores são cumulativos. Usada em conjunto com Ofício, você também pode forjar versões falsas de outros objetos (jóias, por exemplo). Use a perícia Ofício para fabricar a peça, e então um teste de Falsificação para que ela se pareça com o artigo genuíno.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{
+	"pericia_ref" : "Identificar Magia",
+	"nome" : "Identificar magia",
+	"descricao" : "quando alguém lança uma magia, você pode adivinhar qual é através de seus gestos e palavras (CD 15 + nível da magia), antes que ela seja efetivamente conjurada. Você também pode identifi car uma magia que já tenha sido lançada e que esteja funcionando (CD 20 + nível da magia). Identifi car uma magia é uma reação.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+{
+	"pericia_ref" : "Identificar poção",
+	"nome" : "Identificar poção",
+	"descricao" : "identificar uma poção exige pelo menos 1 minuto.",
+	"classe_dificuldade" : "CD 20"
+}
+
+
+
+{
+	"pericia_ref" : "Identificar poção",
+	"nome" : "Lançar magia de armadura",
+	"descricao" : "armaduras interferem com os gestos delicados necessários para conjurar. Lançar uma magia arcana usando armaduras de qualquer tipo exige um teste (CD 25 + nível da magia). O teste sofre penalidade de armadura. Se falhar, a magia não funciona, mas mesmo assim gasta pontos de magia.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+
+{
+	"pericia_ref" : "Identificar poção",
+	"nome" : "Usar instrumento mágico",
+	"descricao" : "você pode 'enganar' um item mágico para que funcione com você, mesmo quando não deveria. Por exemplo, pode golpear com uma espada sagrada que funciona apenas nas mãos de pessoas Bondosas (mesmo que você não seja), ou vestir uma capa mágica feita para elfos mesmo que você seja humano, ou atravessar um portão mágico construído para permitir apenas a passagem de druidas. Faça o teste para cada ativação do item (para pergaminhos, varinhas...) ou a cada hora (para armas, armaduras, anéis...).", 
+	"classe_dificuldade" : "CD 25"
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Iniciativa",
+	"nome" : "Iniciativa em combate",
+	"descricao" : "quando um combate se inicia, cada personagem envolvido faz um teste de Iniciativa. Aqueles com resultados mais altos agem primeiro.",
+	"classe_dificuldade" : "Leia o texto"
+}
+
+
+
+{
+	"pericia_ref" : "Iniciativa",
+	"nome" : "Evitar finta",
+	"descricao" : "quando um oponente tenta fi ntar você em combate, você faz um teste de Iniciativa contra o teste de Enganação dele. Se você é bem-sucedido, a finta falha.",
+	"classe_dificuldade" : ""
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{
+	"pericia_ref" : "Intuição",
+	"nome" : "Desacreditar",
+	"descricao" : "você percebe algo errado, mesmo sem nenhum sinal aparente; uma pessoa agindo de forma estranha por estar enfeitiçada; uma parede que não deveria estar ali (pois na verdade é uma ilusão); ou um monstro que não deveria existir na região — porque na verdade é uma criatura transformada, ou foi conjurado por um mago.",
+	"classe_dificuldade" : "CD 20 ou 20 + nível da magia"
+}
+
+{
+	"pericia_ref" : "Intuição",
+	"nome" : "Sentir motivação",
+	"descricao" : "você percebe se alguém está mentindo. Um teste bem-sucedido faz com que você não seja afetado por um blefe (veja a perícia Enganação). Você pode também usar esta perícia para ter um “palpite” sobre a confi abilidade de uma pessoa (CD 20).",
+	"classe_dificuldade" : "Leia texto"
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+{
+	"pericia_ref" : "Ladinagem",
+	"nome" : "Abrir fechaduras",
+	"descricao" : "com uma ação completa, você pode abrir uma fechadura trancada (isto é, sem ter a chave). Uma fechadura simples (porta da frente de uma casa) tem CD 20. Uma fechadura média (prisão, baú...) tem CD 25. E uma fechadura superior (cofre, câmara do tesouro...) tem CD 30. Este uso exige um kit de ladrão. Sem ele, você sofre uma penalidade de –5 no teste.",
+	"classe_dificuldade" : "Leia texto"
+}
+
+
+
+{
+	"pericia_ref" : "Ladinagem",
+	"nome" : "Ocultar item",
+	"descricao" : "você pode gastar uma ação padrão para esconder um item em seu corpo. O objeto deve ser pelo menos uma categoria de tamanho menor que você. Faça um teste de Ladinagem contra um teste de Percepção de qualquer um que possa vê-lo. Para um objeto uma categoria menor que você, seu teste sofre penalidade de –5; duas categorias menor, 0; três categorias menor, +5; quatro ou mais categorias menor, +10. Se uma pessoa revistar você, recebe +10 no teste de Percepção.",
+	"classe_dificuldade" : ""
+}
+
+{
+	"pericia_ref" : "Ladinagem",
+	"nome" : "Operar mecanismo",
+	"descricao" : "esta perícia permite desabilitar, reativar ou sabotar (mas não consertar) dispositivos mecânicos diversos, como fechaduras, armadilhas, veículos e armas de fogo. Você também pode sabotar aparatos para que funcionem por algum um tempo, falhando apenas mais tarde (normalmente após 1d4 rodadas ou minutos de uso). Usar esta perícia leva 1d4 rodadas, e a difi culdade depende da complexidade da tarefa. Uma ação simples (emperrar uma fechadura ou arma de fogo) tem CD 10. Uma ação média (sabotar uma roda de carroça, ponte levadiça ou balão goblin) tem CD 15. Uma ação difícil (desativar ou reativar uma armadilha) tem CD 20. Por fi m, uma ação muito complexa (como desativar ou reativar uma armadilha avançada, ou sabotar um canhão naval para explodir quando utilizado) tem CD 25. Se falhar por 5 ou mais, alguma coisa saiu muito errada: se é uma armadilha, ela se ativa; se estiver tentando uma sabotagem, você acha que o mecanismo está desabilitado, mas na verdade ele ainda funciona normalmente. Este uso exige um kit de ladrão. Sem ele, você sofre uma penalidade de –5 no teste.",
+	"classe_dificuldade" : "LEia o texto"
+}
+
+
+
+{
+	"pericia_ref" : "Ladinagem",
+	"nome" : "Prestidigitação",
+	"descricao" : "você consegue surrupiar ou plantar objetos nos bolsos de outras pessoas sem que elas percebam. Faça um teste de Ladinagem (CD 20). Em caso de sucesso, você consegue pegar (ou colocar) o que queria. A vítima tem direito a um teste de Percepção (CD igual ao resultado de seu teste de Furtividade). Se tiver sucesso, ela percebe sua tentativa, tenha você conseguido ou não. Tentar surrupiar ou plantar algo gasta uma ação padrão.",
+	"classe_dificuldade" : "CD 20"
+}
+
+
+
+{
+	"pericia_ref" : "Ladinagem",
+	"nome" : "Usar instrumento mágico",
+	"descricao" : "você pode 'enganar' um item mágico para que funcione com você, mesmo quando não deveria. Por exemplo, pode golpear com uma espada sagrada que funciona apenas nas mãos de pessoas Bondosas (mesmo que você não seja), ou vestir uma capa mágica feita para elfos mesmo que você seja humano, ou atravessar um portão mágico construído para permitir apenas a passagem de druidas. Faça o teste para cada ativação do item (para pergaminhos, varinhas...) ou a cada hora (para armas, armaduras, anéis...).",
+	"classe_dificuldade" : "CD 25"
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Ofício",
+	"nome" : "Avaliação",
+	"descricao" : "um teste pode estimar o valor de um item ligado a seu Ofício — desde algo que você consiga fabricar até um instrumento ou ferramenta que esteja habituado a usar —, conseguindo diferenciar uma peça de qualidade de uma inferior. Avaliar itens comuns ou conhecidos tem CD 10. Uma falha signifi ca que você estimou entre 50% a 150% (2d6+3 vezes 10%) do valor verdadeiro. Avaliar um item raro ou exótico tem CD 20, e neste caso falhar indica que você não sabe o valor do item. Um teste de Ofício também pode substituir um teste de Percepção para perceber uma falsifi cação. Neste caso, você recebe +2 em seu teste de Ofício.",
+	"classe_dificuldade" : "Leia texto"
+}
+
+
+
+
+{
+	"pericia_ref" : "Ofício",
+	"nome" : "Fabricar item",
+	"descricao" : "fabricar um item exige matéria-prima no valor de um terço do preço original do item (veja em “Equipamento”). O tempo necessário é uma semana por cada 100 TO. No fi m desse período, faça um teste de Ofício. Se tiver sucesso, o item está pronto. Se falhar, pode gastar mais uma semana para tentar de novo. Você pode fazer quantas tentativas quiser — mas se falhar por 5 ou mais em qualquer dos testes, você estraga as matérias-primas e precisa recomeçar do zero. A difi culdade depende do tipo e complexidade do item. Itens muito simples (como uma colher de pau) têm CD 10. Itens típicos (caldeirão de ferro, retrato, arma simples, armadura leve...) têm CD 15. Itens complexos (sino, arma marcial, armadura média...) têm CD 20. Por fi m, itens de qualidade superior (fechadura, relógio, arma de fogo, armadura pesada...) têm CD 25. Você pode aceitar uma penalidade de –5 no teste para tentar fabricar o item na metade do tempo (3 dias para um item de até 100 TO, 1 semana para um item de até 200 TO, e assim por diante).",
+	"classe_dificuldade" : "LEia texto"
+}
+
+
+
+{
+	"pericia_ref" : "Ofício",
+	"nome" : "Consertar item",
+	"descricao" : "geralmente, reparar um item tem a mesma CD necessária para fabricá-lo. Cada tentativa consome um dia inteiro de trabalho e um quinto do preço original do item. Em caso de falha, o tempo e dinheiro são perdidos — mas você sempre pode tentar novamente.",
+	"classe_dificuldade" : "LEia texto"
+}
+
+
+
+{
+	"pericia_ref" : "Ofício",
+	"nome" : "Sustento",
+	"descricao" : "você pode praticar seu trabalho e tirar sustento dele. Com uma semana de trabalho em um teste de Ofício, você ganha 1 Tibar de ouro por cada ponto que seu teste exceder 15. Por exemplo, se teve um resultado fi nal 19, ganha 4 TO pela semana de trabalho. Trabalhadores treinados ganham uma média de 1 TO por semana, enquanto trabalhadores sem treinamento recebem em média 1 peça de prata por dia.",
+	"classe_dificuldade" : "Leia texto"
+}
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+{
+	"pericia_ref" : "Percepção",
+	"nome" : "Observar",
+	"descricao" : "você pode notar coisas, pessoas ou criaturas escondidas. O teste é oposto ao teste de Furtividade do personagem tentando não ser visto. Às vezes o alvo não está se escondendo intencionalmente, mas ainda assim exige um teste de Percepção para ser notado. Nestes casos a difi culdade varia entre CD 5 (uma pessoa em uma praça com pouco movimento) até 20 (um soldado específi co em meio a uma grande batalha). Esta perícia também é usada para ver através de um disfarce, perceber um documento falso (veja a perícia Enganação) e ler lábios (CD 20).",
+	"classe_dificuldade" : "LEia texto"
+}
+
+
+
+
+{
+	"pericia_ref" : "Percepção",
+	"nome" : "Ouvir",
+	"descricao" : "você pode tentar coisas como uma conversa distante ou um inimigo tentando se aproximar em silêncio. Em masmorras, é bastante prudente parar para escutar antes de entrar em um novo corredor ou aposento. A difi culdade depende da intensidade do barulho. Uma conversa casual próxima tem CD 0 — ou seja, a menos que exista alguma penalidade (veja adiante), você é bem-sucedido automaticamente. Ouvir pessoas sussurrando tem CD 15. Ouvir do outro lado de uma porta adiciona aumenta a CD em +5. Ouvir alguém se aproximando sorrateiramente exige um teste de Percepção contra o teste de Furtividade da criatura. Perceber criaturas invisíveis tem CD 20, ou +10 no teste de Furtividade da criatura, o que for maior. Mesmo que você seja bem-sucedido no teste, ainda sofre penalidades normais por lutar sem ver o inimigo. Mesmo dormindo você pode fazer testes de Percepção para ouvir algo, mas sofre uma penalidade de –10; um sucesso faz você acordar.",
+	"classe_dificuldade" : "LEia texto"
+}
+
+
+
+
+{
+	"pericia_ref" : "Percepção",
+	"nome" : "Procurar",
+	"descricao" : "examinando atentamente uma coisa ou local, você pode perceber detalhes úteis ou encontrar algo que estava procurando. Você precisa estar a pelo menos 3m do item a ser examinado. Examinar uma área de 1,5m de lado gasta uma ação completa. • Procurar um item específi co dentro de um baú cheio de objetos: CD 10. • Encontrar uma porta secreta: CD 20. • Perceber uma porta secreta muito bem escondida: CD 30. Encontrar armadilhas (apenas personagens com esta habilidade de classe): CD 20 ou maior. Para armadilhas mágicas, CD 25 + nível da magia usada. Um teste de Percepção pode revelar rastros, mas não permite identifi car esses rastros, segui-los ou dizer de que direção vieram (ou para onde vão). A difi culdade varia para cada caso (veja o talento Rastrear).",
+	"classe_dificuldade" : "Leia texto"
+}
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 {
 	"pericia_ref" : "",
 	"nome" : "",
 	"descricao" : "",
-	"cooldown" : ""
+	"classe_dificuldade" : ""
 }
+
+
+
+
+
 ]

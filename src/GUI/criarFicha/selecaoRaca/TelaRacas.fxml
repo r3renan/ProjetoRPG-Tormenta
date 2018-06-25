@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -16,19 +18,19 @@
         <items>
           <AnchorPane maxWidth="250.0" minHeight="0.0" minWidth="0.0" onKeyReleased="#onMouseClick" prefHeight="598.0" prefWidth="231.0">
                <children>
-                  <ListView fx:id="lista" layoutX="148.0" layoutY="246.0" prefHeight="718.0" prefWidth="274.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ListView fx:id="lista" layoutX="148.0" layoutY="246.0" onKeyReleased="#onMouseClick" onMouseClicked="#onMouseClick" prefHeight="718.0" prefWidth="274.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="582.0">
                <children>
-                  <GridPane layoutX="43.0" layoutY="121.0" prefHeight="60.0" prefWidth="440.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="287.0" AnchorPane.topAnchor="25.0">
+                  <GridPane layoutX="14.0" layoutY="34.0" prefHeight="60.0" prefWidth="401.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="327.0" AnchorPane.topAnchor="34.0">
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="147.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="250.0" minHeight="250.0" prefHeight="250.0" valignment="TOP" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Nome:">
@@ -40,56 +42,63 @@
                            <font>
                               <Font size="14.0" />
                            </font>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
                         </Label>
                         <Label fx:id="nome" GridPane.columnIndex="1" />
-                        <Label fx:id="resumo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="resumo" textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin></Label>
                      </children>
                   </GridPane>
-                  <Button fx:id="btnPersonalidade" layoutX="50.0" layoutY="198.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Personalidade" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="200.0">
+                  <Button fx:id="btnPersonalidade" layoutX="50.0" layoutY="198.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirPersonalidade" text="Personalidade" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="350.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnAparência" layoutX="50.0" layoutY="331.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Aparência" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="360.0">
+                  <Button fx:id="btnAparência" layoutX="50.0" layoutY="331.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirAparencia" text="Aparência" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="460.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnRelações" layoutX="250.0" layoutY="360.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Relações" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="360.0">
+                  <Button fx:id="btnRelações" layoutX="250.0" layoutY="360.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirRelacoes" text="Relações" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="460.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnTendencia" layoutX="50.0" layoutY="520.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Tendência" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="520.0">
+                  <Button fx:id="btnTendencia" layoutX="50.0" layoutY="520.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirTendencia" text="Tendência" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="570.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnTerra" layoutX="250.0" layoutY="520.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Terra" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="520.0">
+                  <Button fx:id="btnTerra" layoutX="250.0" layoutY="520.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirTerra" text="Terra" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="570.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnReligião" layoutX="450.0" layoutY="344.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Religião" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="360.0">
+                  <Button fx:id="btnReligião" layoutX="450.0" layoutY="344.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirReligiao" text="Religião" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="460.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnNomes" layoutX="450.0" layoutY="198.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Nomes" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="200.0">
+                  <Button fx:id="btnNomes" layoutX="450.0" layoutY="198.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirNomes" text="Nomes" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="350.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnAventuras" layoutX="250.0" layoutY="198.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Aventuras" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="200.0">
+                  <Button fx:id="btnAventuras" layoutX="250.0" layoutY="198.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirAventuras" text="Aventuras" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="350.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnIdiomas" layoutX="450.0" layoutY="520.0" minHeight="90.0" minWidth="160.0" mnemonicParsing="false" text="Idiomas" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="520.0">
+                  <Button fx:id="btnIdiomas" layoutX="450.0" layoutY="520.0" minHeight="90.0" minWidth="130.0" mnemonicParsing="false" onAction="#exibirIdiomas" text="Idiomas" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="570.0">
                      <font>
-                        <Font size="18.0" />
+                        <Font size="16.0" />
                      </font>
                   </Button>
+                  <TextArea fx:id="textArea" editable="false" layoutX="483.0" layoutY="26.0" prefHeight="200.0" prefWidth="230.0" wrapText="true" AnchorPane.bottomAnchor="44.0" AnchorPane.topAnchor="26.0" />
                </children>
             </AnchorPane>
         </items>

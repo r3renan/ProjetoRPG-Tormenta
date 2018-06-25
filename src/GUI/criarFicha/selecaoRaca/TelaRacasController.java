@@ -11,6 +11,7 @@ import parser.Raca;
 import static database.TABLE_Racas.consultar;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 public class TelaRacasController implements Initializable {
 
@@ -22,20 +23,77 @@ public class TelaRacasController implements Initializable {
     
     @FXML
     private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas;
+    
+    @FXML
+    private TextArea textArea;
+    
+    private Raca raca;
 
     @FXML
     private void onMouseClick(){
         String itemSelecionado = lista.getSelectionModel().getSelectedItem();
-        Raca raca = consultar("*", "NOME='" + itemSelecionado + "'");
+        raca = consultar("*", "NOME='" + itemSelecionado + "'");
         
         nome.setText(raca.getNome());
         resumo.setText(raca.getResumo());
-        
+    }
+    
+    @FXML
+    private void exibirPersonalidade(){
+        textArea.clear();
+        textArea.setText(raca.getPersonalidade());
+    }
+    
+    @FXML
+    private void exibirAventuras(){
+        textArea.clear();
+        textArea.setText(raca.getAventuras());
+    }
+    
+    @FXML
+    private void exibirNomes(){
+        textArea.clear();
+        textArea.setText(raca.getNomes());
+    }
+    
+    @FXML
+    private void exibirAparencia(){
+        textArea.clear();
+        textArea.setText(raca.getAparencia());
+    }
+    
+    @FXML
+    private void exibirRelacoes(){
+        textArea.clear();
+        textArea.setText(raca.getRelacoes());
+    }
+    
+    @FXML
+    private void exibirReligiao(){
+        textArea.clear();
+        textArea.setText(raca.getReligiao());
+    }
+    
+    @FXML
+    private void exibirTendencia(){
+        textArea.clear();
+        textArea.setText(raca.getTendencia());
+    }
+    
+    @FXML
+    private void exibirTerra(){
+        textArea.clear();
+        textArea.setText(raca.getTerra());
+    }
+    
+    @FXML
+    private void exibirIdiomas(){
+        textArea.clear();
+        textArea.setText(raca.getIdiomas());
     }
     
     private void listarRacas(ArrayList<String> racas){ //FUNÇÃO SEM UTILIDADE, ANALISAR E REMOVER OU NÃO ASSIM QUE POSSIVEL
         lista.getItems().clear();
-        
         lista.getItems().addAll(racas);
     }
     
