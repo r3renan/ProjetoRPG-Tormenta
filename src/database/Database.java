@@ -31,6 +31,23 @@ public class Database {
         }
     }
     
+    public static ResultSet executarQuery(String sql){
+        Connection c = connect();
+        ResultSet result = null;
+        
+        try {
+            Statement s = c.createStatement();
+            result = s.executeQuery(sql);
+            c.close();
+            s.close();
+            
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        return result;
+    }
+    
     public static ArrayList<String> queryConsulta(String query){
         Connection c = connect();
         ArrayList<String> saida = new ArrayList<>();

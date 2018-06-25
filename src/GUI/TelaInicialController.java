@@ -42,10 +42,10 @@ public class TelaInicialController implements Initializable {
         
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
-        Parent root = loader.load();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
+        Parent root = fxmlloader.load();
         
-        TelaCriarFichaController controller = loader.getController();
+        TelaCriarFichaController controller = fxmlloader.getController();
         controller.setFicha_id(ficha_id);
         controller.preencherCampos();
         

@@ -1,5 +1,8 @@
 package GUI.criarFicha.selecaoRaca;
 
+import GUI.criarFicha.TelaCriarFichaController;
+import static database.Database.executarQuery;
+import static database.Database.executarUpdate;
 import static database.Database.queryConsulta;
 import java.net.URL;
 import java.util.ArrayList;
@@ -9,9 +12,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import parser.Raca;
 import static database.TABLE_Racas.consultar;
+import java.sql.ResultSet;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 public class TelaRacasController implements Initializable {
 
@@ -28,6 +36,12 @@ public class TelaRacasController implements Initializable {
     private TextArea textArea;
     
     private Raca raca;
+    
+    private int ficha_id;
+    public void setFicha_id(int ficha_id) {
+        this.ficha_id = ficha_id;
+    }
+    
 
     @FXML
     private void onMouseClick(){
@@ -40,8 +54,24 @@ public class TelaRacasController implements Initializable {
     }
     
     @FXML
-    private void selecionarRaca(){
-        String itemSelecionado = lista.getSelectionModel().getSelectedItem();
+    private void selecionarRaca() throws Exception{
+        ResultSet result;
+        String sql = "SELECT ID FROM RACAS WHERE NOME='" + raca.getNome() + "'";
+        result = executarQuery(sql);
+        sql = "UPDATE FICHAS SET ID_RACA=" + result.getInt("ID") + " WHERE ID=" + ficha_id;
+        executarUpdate(sql);
+        
+        Stage stage = (Stage) btnSelecionar.getScene().getWindow();
+        
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
+        Parent root = fxmlloader.load();
+        
+        TelaCriarFichaController controller = fxmlloader.getController();
+        controller.setFicha_id(ficha_id);
+        controller.preencherCampos();
+        
+        Scene novaScene = new Scene(root, 1000, 690);
+        stage.setScene(novaScene);
     }
     
     @FXML
@@ -108,7 +138,6 @@ public class TelaRacasController implements Initializable {
         lista.setStyle("-fx-font-size: 1.5em;");
         String query = "SELECT NOME FROM RACAS";
         ArrayList<String> racas = queryConsulta(query);
-        System.out.println(racas);
         listarRacas(racas);
         
     }    

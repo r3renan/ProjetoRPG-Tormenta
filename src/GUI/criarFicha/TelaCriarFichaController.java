@@ -1,5 +1,6 @@
 package GUI.criarFicha;
 
+import GUI.criarFicha.selecaoRaca.TelaRacasController;
 import static database.Database.connect;
 import java.net.URL;
 import java.sql.Connection;
@@ -12,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -50,8 +52,11 @@ public class TelaCriarFichaController implements Initializable {
     public void escolherRaca() throws Exception{
         Stage stage = (Stage) btnRacas.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/selecaoRaca/TelaRacas.fxml"));
+        Parent root = loader.load();
+        TelaRacasController controller = loader.getController();
+        controller.setFicha_id(ficha_id);
         
-        Scene telaEscolherRaca = new Scene(loader.load(), 1000, 690);
+        Scene telaEscolherRaca = new Scene(root, 1000, 690);
         stage.setScene(telaEscolherRaca);
     }
     
@@ -81,7 +86,6 @@ public class TelaCriarFichaController implements Initializable {
     }
     
     public void preencherCampos(){
-        System.out.println("Ficha ID: " + ficha_id);
         Connection c = connect();
         String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
         
@@ -95,6 +99,9 @@ public class TelaCriarFichaController implements Initializable {
             campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
             campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
             campoCarisma.setText(Integer.toString(ficha.getCarisma()));
+            
+            raca.setText(Integer.toString(ficha.getId_raca()));
+            classe.setText(Integer.toString(ficha.getId_classe()));
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }    
@@ -102,11 +109,11 @@ public class TelaCriarFichaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try {
+        /*try {
             preencherCampos();
         } catch(Exception e){
             System.out.println(e.getClass().getName() + ": " + e.getMessage());
-        }
+        }*/
             
     }    
 }
