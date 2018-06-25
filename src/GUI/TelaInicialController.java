@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import parser.ParserJSON;
+import parser.Ficha;
 
 public class TelaInicialController implements Initializable {
     
@@ -18,6 +19,7 @@ public class TelaInicialController implements Initializable {
     
     @FXML
     private void telaCriarFicha(ActionEvent event) throws Exception {
+        Ficha ficha = new Ficha();
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
