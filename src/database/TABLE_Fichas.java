@@ -1,6 +1,10 @@
 package database;
 
+import static database.Database.connect;
 import static database.Database.executarUpdate;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import parser.Ficha;
 
 
@@ -55,5 +59,25 @@ public class TABLE_Fichas {
         
         executarUpdate(sql);
         System.out.println("Nova ficha cadastrada com sucesso.");
+    }
+    
+    public Ficha consultar(String coluna, String busca){
+        Connection c = connect();
+        String sql = "SELECT " + coluna + " FROM FICHAS";
+        if (busca != null){
+            sql = sql + " WHERE " + busca;
+        }
+        
+        Ficha ficha = null;
+        
+        try{
+            Statement s = c.createStatement();
+            ResultSet result = s.executeQuery(sql);
+            ficha = new Ficha(result);
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        return ficha;
     }
 }

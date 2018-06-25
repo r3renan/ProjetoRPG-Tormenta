@@ -1,5 +1,7 @@
 package parser;
 
+import java.sql.ResultSet;
+
 public class Ficha {
     
     private String nome;
@@ -38,6 +40,26 @@ public class Ficha {
         modInteligencia = 0;
         modSabedoria = 0;
         modCarisma = 0;
+    }
+    
+    public Ficha(ResultSet dados) throws Exception {
+        nome = dados.getString("NOME");
+        id_raca = dados.getInt("ID_RACA");
+        id_classe = dados.getInt("ID_CLASSE");
+        nivel = dados.getInt("NIVEL");
+        forca = dados.getInt("FORCA");
+        destreza = dados.getInt("DESTREZA");
+        constituicao = dados.getInt("CONSTITUICAO");
+        inteligencia = dados.getInt("INTELIGENCIA");
+        sabedoria = dados.getInt("SABEDORIA");
+        carisma = dados.getInt("CARISMA");
+        
+        modForca = dados.getInt("MOD_FORCA");
+        modDestreza = dados.getInt("MOD_DESTREZA");
+        modConstituicao = dados.getInt("MOD_CONSTITUICAO");
+        modInteligencia = dados.getInt("MOD_INTELIGENCIA");
+        modSabedoria = dados.getInt("MOD_SABEDORIA");
+        modCarisma = dados.getInt("MOD_CARISMA");
     }
 
     public int getNivel() {

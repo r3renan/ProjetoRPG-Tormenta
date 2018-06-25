@@ -1,6 +1,10 @@
 package GUI.criarFicha;
 
+import static database.Database.connect;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -13,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import parser.Ficha;
 
 public class TelaCriarFichaController implements Initializable {
         
@@ -26,6 +31,11 @@ public class TelaCriarFichaController implements Initializable {
     private TextField campoNome, campoForca, campoDestreza, campoConstituicao, campoInteligencia, campoSabedoria, campoCarisma;
     
     private int ficha_id;
+    public void setFicha_id(int ficha_id) {
+        this.ficha_id = ficha_id;
+    }
+    
+    private Ficha ficha;
     
     @FXML
     public void escolherClasse() throws Exception{
@@ -72,7 +82,24 @@ public class TelaCriarFichaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //campoForca.setText(TelaInicialController.ficha);
+        Connection c = connect();
+        String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
+        
+        try{
+            Statement s = c.createStatement();
+            ResultSet result = s.executeQuery(sql);
+            ficha = new Ficha(result);
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
+        campoForca.setText(Integer.toString(ficha.getForca()));
+        campoDestreza.setText(Integer.toString(ficha.getDestreza()));
+        campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
+        campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
+        campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
+        campoCarisma.setText(Integer.toString(ficha.getCarisma()));
+        
         // TODO
     }    
 }

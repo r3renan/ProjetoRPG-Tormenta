@@ -1,10 +1,10 @@
 package GUI;
 
+import GUI.criarFicha.TelaCriarFichaController;
 import static database.Database.connect;
 import database.TABLE_Fichas;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -34,9 +35,7 @@ public class TelaInicialController implements Initializable {
             Connection c = connect();
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery("SELECT MAX(ID) FROM FICHAS");
-            System.out.println(result.getInt("ID"));
-            //ficha_id = result.getInt();
-            System.out.println("NOVA FICHA - ID = " + ficha_id);
+            ficha_id = result.getInt("MAX(ID)");
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
@@ -44,8 +43,18 @@ public class TelaInicialController implements Initializable {
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
-        Scene novaScene = new Scene(loader.load(), 1000, 690);
-        stage.setScene(novaScene);
+        TelaCriarFichaController controller = loader.<TelaCriarFichaController>getController();
+        try {
+            System.out.println("OI");
+            controller.setFicha_id(ficha_id);
+            System.out.println("FALA");
+            Scene novaScene = new Scene(loader.load(), 1000, 690);
+            System.out.println("EAE");
+            stage.setScene(novaScene);
+            System.out.println("HEHE");
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
     }
     
     @FXML
