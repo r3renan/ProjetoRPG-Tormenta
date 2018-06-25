@@ -15,10 +15,6 @@ public class Magia {
     private String testeResistencia;
     private String fonte;
     private String descricao;
-    
-   public Magia(){
-       this.nome = "NAO INICIALIZADO";
-   }
    
    public Magia(ResultSet dados) throws Exception{
        ID = dados.getInt("ID");

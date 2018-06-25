@@ -25,8 +25,28 @@ public class Raca {
     private int aj_distributivo;
     private int quant_status;
     
-    Raca(ResultSet resultado){
-        
+    Raca(ResultSet dados) throws Exception {
+        ID = dados.getInt("ID");
+        nome = dados.getString("NOME");
+        resumo = dados.getString("RESUMO");
+        personalidade = dados.getString("PERSONALIDADE");
+        aparencia = dados.getString("APARENCIA");
+        relacoes = dados.getString("RELACOES");
+        tendencia = dados.getString("TENDENCIA");
+        terra = dados.getString("TERRA");
+        religiao = dados.getString("RELIGIAO");
+        nomes = dados.getString("NOMES");
+        aventuras = dados.getString("AVENTURAS");
+        idiomas = dados.getString("IDIOMAS");
+        aj_forca = dados.getInt("AJ_FORCA");
+        aj_destreza = dados.getInt("AJ_DESTREZA");
+        aj_constituicao = dados.getInt("AJ_CONSTITUICAO");
+        aj_sabedoria = dados.getInt("AJ_SABEDORIA");
+        aj_inteligencia = dados.getInt("AJ_INTELIGENCIA");
+        aj_carisma = dados.getInt("AJ_CARISMA");
+        aj_distributivo = dados.getInt("AJ_DISTRIBUTIVO");
+        quant_status = dados.getInt("QUANT_STATUS");
+                
     }
 
     public int getID() {
