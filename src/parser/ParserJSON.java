@@ -29,7 +29,7 @@ public class ParserJSON{
     }
     
     public static void cadastrarTracosRaciais() throws Exception{
-        JsonReader reader = new JsonReader(new FileReader("lib/tracos_raciais"));
+        JsonReader reader = new JsonReader(new FileReader("lib/tracos_raciais.json"));
         ArrayList<TracoRacial> tracosRaciais = new Gson().fromJson(reader, new TypeToken<ArrayList<TracoRacial>>() {}.getType());
         
         for (TracoRacial tracoRacial : tracosRaciais){

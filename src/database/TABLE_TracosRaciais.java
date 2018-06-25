@@ -18,7 +18,7 @@ public class TABLE_TracosRaciais {
     
     public static void inserir(TracoRacial traco){
         String sql = "INSERT INTO TRACOS_RACIAIS("
-                + "'" + traco.getID() + "',"
+                + "NULL,"
                 + "'" + traco.getRaca() + "',"
                 + "'" + traco.getTraco() + "')";
         

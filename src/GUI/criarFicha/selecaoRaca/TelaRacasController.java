@@ -23,7 +23,7 @@ public class TelaRacasController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         String query = "SELECT NOME FROM RACAS";
         ArrayList<String> racas = queryConsulta(query);
-        lista.getItems().addAll(racas);
+        listarRacas(racas);
         
     }    
     
