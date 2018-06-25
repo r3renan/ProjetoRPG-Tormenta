@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import parser.Raca;
 import static database.TABLE_Racas.consultar;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class TelaRacasController implements Initializable {
@@ -18,6 +19,9 @@ public class TelaRacasController implements Initializable {
     
     @FXML
     private ListView<String> lista;
+    
+    @FXML
+    private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas;
 
     @FXML
     private void onMouseClick(){
