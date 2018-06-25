@@ -24,7 +24,7 @@ public class TABLE_Magias {
                             "DESCRICAO TEXT)";
         
         executarUpdate(sql);
-        //System.out.println("Tabela MAGIAS gerada com sucesso.");
+        System.out.println("Tabela MAGIAS gerada com sucesso.");
     }
     
     public static void inserir(Magia magia){
@@ -43,7 +43,7 @@ public class TABLE_Magias {
                     + "'" + magia.getDescricao() + "')";
 
         executarUpdate(sql);
-        //System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
+        System.out.println("Magia " + magia.getNome() + " inserida com sucesso");
     }
     
     public static Magia consultar(String retorno, String busca){

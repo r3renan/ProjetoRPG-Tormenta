@@ -19,14 +19,14 @@ public class TABLE_Racas {
                     + "NOMES TEXT NOT NULL,"
                     + "AVENTURAS TEXT NOT NULL,"
                     + "IDIOMAS TEXT NOT NULL,"
-                    + "AJ_FORCA INT,"
-                    + "AJ_DESTREZA INT,"
-                    + "AJ_CONSTITUICAO INT,"
-                    + "AJ_SABEDORIA INT,"
-                    + "AJ_INTELIGENCIA INT,"
-                    + "AJ_CARISMA INT,"
-                    + "AJ_DISTRIBUTIVO INT,"
-                    + "QUANT_STATUS INT)";
+                    + "AJ_FORCA INTEGER,"
+                    + "AJ_DESTREZA INTEGER,"
+                    + "AJ_CONSTITUICAO INTEGER,"
+                    + "AJ_SABEDORIA INTEGER,"
+                    + "AJ_INTELIGENCIA INTEGER,"
+                    + "AJ_CARISMA INTEGER,"
+                    + "AJ_DISTRIBUTIVO INTEGER,"
+                    + "QUANT_STATUS INTEGER)";
         
         executarUpdate(sql);
         System.out.println("Tabela RACAS gerada com sucesso.");

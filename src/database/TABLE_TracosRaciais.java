@@ -13,11 +13,11 @@ public class TABLE_TracosRaciais {
                 + "FOREIGN KEY(RACA) REFERENCES RACAS(NOME))";
         
         executarUpdate(sql);
-        System.out.println("Table TRACOS_RACIAIS gerada com sucesso.");
+        System.out.println("Tabela TRACOS_RACIAIS gerada com sucesso.");
     }
     
     public static void inserir(TracoRacial traco){
-        String sql = "INSERT INTO TRACOS_RACIAIS("
+        String sql = "INSERT INTO TRACOS_RACIAIS VALUES("
                 + "NULL,"
                 + "'" + traco.getRaca() + "',"
                 + "'" + traco.getTraco() + "')";
