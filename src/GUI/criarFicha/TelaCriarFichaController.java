@@ -94,18 +94,18 @@ public class TelaCriarFichaController implements Initializable {
         if (ficha.getId_raca() != 0){
             result2 = executarQuery("SELECT NOME FROM RACAS WHERE ID=" + ficha.getId_raca());
             raca.setText(result2.getString("NOME"));
-            result.getStatement().close();
+            result2.getStatement().close();
             System.out.println("Fechando conexão: " + result.getStatement().getConnection());
-            result.getStatement().getConnection().close();
+            result2.getStatement().getConnection().close();
         } else {
             raca.setText("NÃO ESCOLHIDO");
         }
         if (ficha.getId_classe() != 0){
             result2 = executarQuery("SELECT NOME FROM CLASSES WHERE ID=" + ficha.getId_classe());
             classe.setText(result2.getString("NOME"));
-            result.getStatement().close();
+            result2.getStatement().close();
             System.out.println("Fechando conexão: " + result.getStatement().getConnection());
-            result.getStatement().getConnection().close();
+            result2.getStatement().getConnection().close();
         } else {
             classe.setText("NÃO ESCOLHIDO");
         }

@@ -45,12 +45,49 @@ public class TelaConsultarMagiasController implements Initializable {
         nome.setText(magia.getNome());
         nivel.setText(magia.getNivel());
         tempoExecucao.setText(magia.getTempoExecucao());
-        alcance.setText(magia.getAlcance());
-        area.setText(magia.getArea());
-        efeito.setText(magia.getEfeito());
-        alvo.setText(magia.getAlvo());
-        duracao.setText(magia.getDuracao());
-        testeResistencia.setText(magia.getTesteResistencia());
+        
+        if (magia.getTempoExecucao().equals("null")){
+            tempoExecucao.setText("-");
+        } else {
+            tempoExecucao.setText(magia.getTempoExecucao());
+        }
+        
+        if (magia.getAlcance().equals("null")){
+            alcance.setText("-");
+        } else {
+            alcance.setText(magia.getAlcance());
+        }
+        
+        if (magia.getArea().equals("null")){
+            area.setText("-");
+        } else {
+            area.setText(magia.getArea());
+        }
+        
+        if (magia.getEfeito().equals("null")){
+            efeito.setText("-");
+        } else {
+            efeito.setText(magia.getEfeito());
+        }
+        
+        if (magia.getAlvo().equals("null")){
+            alvo.setText("-");
+        } else {
+            alvo.setText(magia.getAlvo());
+        }
+        
+        if (magia.getDuracao().equals("null")){
+            duracao.setText("-");
+        } else {
+            duracao.setText(magia.getDuracao());
+        }
+        
+        if (magia.getTesteResistencia().equals("null")){
+            testeResistencia.setText("-");
+        } else {
+            testeResistencia.setText(magia.getTesteResistencia());
+        }
+        
         fonte.setText(magia.getFonte());
         textoDescricao.getChildren().clear();
         textoDescricao.getChildren().add(new Text(magia.getDescricao()));
