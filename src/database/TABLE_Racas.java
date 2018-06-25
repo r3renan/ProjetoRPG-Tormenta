@@ -1,6 +1,7 @@
 package database;
 
 import static database.Database.connect;
+import static database.Database.executarQuery;
 import static database.Database.executarUpdate;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -64,7 +65,6 @@ public class TABLE_Racas {
     }
     
     public static Raca consultar(String coluna, String busca){
-        Connection c = connect();
         String sql = "SELECT " + coluna + " FROM RACAS";
         if (busca != null){
             sql = sql + " WHERE " + busca;
@@ -73,12 +73,9 @@ public class TABLE_Racas {
         Raca raca = null;
         
         try {
-            Statement s = c.createStatement();
-            ResultSet result = s.executeQuery(sql);
+            ResultSet result = executarQuery(sql);;
             raca = new Raca(result);
-            System.out.println("Nome: " + raca.getNome());
-            s.close();
-            c.close();
+            //System.out.println("Nome: " + raca.getNome());
             
         } catch(Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

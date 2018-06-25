@@ -19,6 +19,7 @@ public class Database {
     
     public static void executarUpdate(String sql){
         Connection c1 = connect();
+        System.out.println("QUERY UPDATE: " + sql);
         
         try {
             Statement s1 = c1.createStatement();
@@ -33,12 +34,13 @@ public class Database {
     
     public static ResultSet executarQuery(String sql){
         Connection c2 = connect();
+        System.out.println("QUERY: " + sql);
         ResultSet result = null;
         
         try {
             Statement s2 = c2.createStatement();
             result = s2.executeQuery(sql);
-            System.out.println("Dentro da query: " + result.isClosed());
+            //System.out.println("Dentro da query: " + result.isClosed());
             //s2.close();
             //c2.close();
             

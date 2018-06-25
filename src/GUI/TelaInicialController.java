@@ -31,11 +31,11 @@ public class TelaInicialController implements Initializable {
     
         ResultSet result = executarQuery("SELECT MAX(ID) FROM FICHAS");
         //System.out.println(result);
-        System.out.println("Fora da query: " + result.isClosed());
+        //System.out.println("Fora da query: " + result.isClosed());
         try{
-            System.out.println("Numero de colunas: " + result.getMetaData().getColumnCount());
-            System.out.println("Nome da coluna: " + result.getMetaData().getColumnName(1));
-            System.out.println("Valor da coluna: " + result.getInt("MAX(ID)"));
+            //System.out.println("Numero de colunas: " + result.getMetaData().getColumnCount());
+            //System.out.println("Nome da coluna: " + result.getMetaData().getColumnName(1));
+            //System.out.println("Valor da coluna: " + result.getInt("MAX(ID)"));
             ficha_id = result.getInt("MAX(ID)");
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

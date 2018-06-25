@@ -76,20 +76,13 @@ public class TelaCriarFichaController implements Initializable {
     
     @FXML
     public void prosseguir() throws Exception{
-        
-        /*Scene scene = btnNext.getScene();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("TelaNext.fxml"));
-        
-        scene.setRoot(loader.load());    */
+        //TODO
     }
     
     public void preencherCampos() throws Exception{
-        System.out.println("FICHA ID = " + ficha_id);
         String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
         ResultSet result = executarQuery(sql);
-        System.out.println("FALA");
         ficha = new Ficha(result);
-        System.out.println("FALA");
         campoForca.setText(Integer.toString(ficha.getForca()));
         campoDestreza.setText(Integer.toString(ficha.getDestreza()));
         campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
