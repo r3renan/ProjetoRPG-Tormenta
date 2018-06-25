@@ -144,9 +144,7 @@ public class TelaConsultarMagiasController implements Initializable {
     public void listarMagias(ArrayList<String> nomeMagias){
         lista.getItems().clear();
         
-        for (String magia : nomeMagias){
-            lista.getItems().add(magia);
-        }
+        lista.getItems().addAll(nomeMagias);
     }
     
     @Override
