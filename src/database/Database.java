@@ -18,13 +18,13 @@ public class Database {
     }
     
     public static void executarUpdate(String sql){
-        Connection c = connect();
+        Connection c1 = connect();
         
         try {
-            Statement s = c.createStatement();
-            s.executeUpdate(sql);
-            s.close();
-            c.close();
+            Statement s1 = c1.createStatement();
+            s1.executeUpdate(sql);
+            s1.close();
+            c1.close();
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
@@ -32,16 +32,18 @@ public class Database {
     }
     
     public static ResultSet executarQuery(String sql){
-        Connection c = connect();
+        Connection c2 = connect();
         ResultSet result = null;
         
         try {
-            Statement s = c.createStatement();
-            result = s.executeQuery(sql);
-            c.close();
-            s.close();
+            Statement s2 = c2.createStatement();
+            result = s2.executeQuery(sql);
+            System.out.println("Dentro da query: " + result.isClosed());
+            //s2.close();
+            //c2.close();
             
         } catch(Exception e){
+            System.out.println("QUERY: " + sql);
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         

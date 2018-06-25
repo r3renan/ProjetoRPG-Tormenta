@@ -1,11 +1,9 @@
 package GUI.criarFicha;
 
 import GUI.criarFicha.selecaoRaca.TelaRacasController;
-import static database.Database.connect;
+import static database.Database.executarQuery;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -85,35 +83,26 @@ public class TelaCriarFichaController implements Initializable {
         scene.setRoot(loader.load());    */
     }
     
-    public void preencherCampos(){
-        Connection c = connect();
+    public void preencherCampos() throws Exception{
+        System.out.println("FICHA ID = " + ficha_id);
         String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
-        
-        try{
-            Statement s = c.createStatement();
-            ResultSet result = s.executeQuery(sql);
-            ficha = new Ficha(result);
-            campoForca.setText(Integer.toString(ficha.getForca()));
-            campoDestreza.setText(Integer.toString(ficha.getDestreza()));
-            campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
-            campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
-            campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
-            campoCarisma.setText(Integer.toString(ficha.getCarisma()));
+        ResultSet result = executarQuery(sql);
+        System.out.println("FALA");
+        ficha = new Ficha(result);
+        System.out.println("FALA");
+        campoForca.setText(Integer.toString(ficha.getForca()));
+        campoDestreza.setText(Integer.toString(ficha.getDestreza()));
+        campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
+        campoInteligencia.setText(Integer.toString(ficha.getInteligencia()));
+        campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
+        campoCarisma.setText(Integer.toString(ficha.getCarisma()));
             
-            raca.setText(Integer.toString(ficha.getId_raca()));
-            classe.setText(Integer.toString(ficha.getId_classe()));
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }    
+        raca.setText(Integer.toString(ficha.getId_raca()));
+        classe.setText(Integer.toString(ficha.getId_classe()));
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /*try {
-            preencherCampos();
-        } catch(Exception e){
-            System.out.println(e.getClass().getName() + ": " + e.getMessage());
-        }*/
-            
+        //TODO
     }    
 }

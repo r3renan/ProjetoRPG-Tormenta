@@ -34,7 +34,6 @@ public class TABLE_Fichas {
                 + ")";
 
         executarUpdate(sql);
-        System.out.println("Tabela FICHAS gerada com sucesso.");
     }
     
     public static void inserir(Ficha ficha){
@@ -58,7 +57,6 @@ public class TABLE_Fichas {
                 + "'" + ficha.getModCarisma() + "')";
         
         executarUpdate(sql);
-        System.out.println("Nova ficha cadastrada com sucesso.");
     }
     
     public Ficha consultar(String coluna, String busca){
@@ -74,6 +72,8 @@ public class TABLE_Fichas {
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
             ficha = new Ficha(result);
+            s.close();
+            c.close();
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }

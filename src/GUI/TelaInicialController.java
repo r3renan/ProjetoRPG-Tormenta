@@ -1,12 +1,10 @@
 package GUI;
 
 import GUI.criarFicha.TelaCriarFichaController;
-import static database.Database.connect;
+import static database.Database.executarQuery;
 import database.TABLE_Fichas;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,16 +28,19 @@ public class TelaInicialController implements Initializable {
     private void telaCriarFicha(ActionEvent event) throws Exception {
         Ficha ficha = new Ficha();
         TABLE_Fichas.inserir(ficha);
-        
-        try {
-            Connection c = connect();
-            Statement s = c.createStatement();
-            ResultSet result = s.executeQuery("SELECT MAX(ID) FROM FICHAS");
+    
+        ResultSet result = executarQuery("SELECT MAX(ID) FROM FICHAS");
+        //System.out.println(result);
+        System.out.println("Fora da query: " + result.isClosed());
+        try{
+            System.out.println("Numero de colunas: " + result.getMetaData().getColumnCount());
+            System.out.println("Nome da coluna: " + result.getMetaData().getColumnName(1));
+            System.out.println("Valor da coluna: " + result.getInt("MAX(ID)"));
             ficha_id = result.getInt("MAX(ID)");
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
-        
+                
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));

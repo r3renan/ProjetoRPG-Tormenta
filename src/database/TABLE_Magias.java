@@ -24,7 +24,6 @@ public class TABLE_Magias {
                             "DESCRICAO TEXT)";
         
         executarUpdate(sql);
-        System.out.println("Tabela MAGIAS gerada com sucesso.");
     }
     
     public static void inserir(Magia magia){
@@ -60,6 +59,8 @@ public class TABLE_Magias {
             ResultSet result = s.executeQuery(sql);
             magia = new Magia(result);
             System.out.println("Nome: " + magia.getNome());
+            s.close();
+            c.close();
             
         } catch(Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());

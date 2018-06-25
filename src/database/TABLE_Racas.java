@@ -33,8 +33,6 @@ public class TABLE_Racas {
                     + "QUANT_STATUS INTEGER)";
         
         executarUpdate(sql);
-        System.out.println("Tabela RACAS gerada com sucesso.");
-        
     }
     
     public static void inserir(Raca raca){
@@ -79,6 +77,8 @@ public class TABLE_Racas {
             ResultSet result = s.executeQuery(sql);
             raca = new Raca(result);
             System.out.println("Nome: " + raca.getNome());
+            s.close();
+            c.close();
             
         } catch(Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
