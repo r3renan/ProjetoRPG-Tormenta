@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 public class TelaCriarFichaController implements Initializable {
         
     @FXML
-    private Label textoDado, textoRolagens;
+    private Label textoDado, textoRolagens, modForca, modDestreza, modConstituicao, modInteligencia, modSabedoria, modCarisma;
     
     @FXML
     private Button btnClasses, btnRacas, btnDado, btnNext;
