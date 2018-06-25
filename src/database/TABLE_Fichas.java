@@ -3,9 +3,9 @@ package database;
 import static database.Database.connect;
 import java.sql.*;
 
-public class DB_Fichas {
+public class TABLE_Fichas {
     
-    public static void gerarTableFichas(){
+    public static void gerarTable(){
         Connection c = connect();
         String sql = "CREATE TABLE FICHAS (" +
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +

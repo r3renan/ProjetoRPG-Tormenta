@@ -1,17 +1,17 @@
 package programa;
 
-import static database.DB_Classes.gerarTableClasses;
-import static database.DB_Fichas.gerarTableFichas;
-import static database.DB_Magias.gerarTableMagias;
-import static database.DB_Racas.gerarTableRacas;
 import static database.Database.connect;
+import database.TABLE_Classes;
+import database.TABLE_Fichas;
+import database.TABLE_Magias;
+import database.TABLE_Racas;
 
 public class Inicializacao {
     public static void inicializacao(){ //Modificar método para futuramente criar a database apenas em casos especificos, como caso não haja nenhum banco de dados criado
         connect();
-        gerarTableClasses();
-        gerarTableMagias();
-        gerarTableRacas();
-        gerarTableFichas();
+        TABLE_Classes.gerarTable();
+        TABLE_Magias.gerarTable();
+        TABLE_Racas.gerarTable();
+        TABLE_Fichas.gerarTable();
     }
 }

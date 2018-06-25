@@ -1,13 +1,11 @@
 package database;
 
-import static database.Database.connect;
-import java.sql.*;
+import static database.Database.executarUpdate;
 import parser.Raca;
 
-public class DB_Racas {
+public class TABLE_Racas {
     
-    public static void gerarTableRacas(){
-        Connection c = connect();
+    public static void gerarTable(){
         String sql = "CREATE TABLE RACAS ("
                     + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + "NOME TEXT NOT NULL,"
@@ -30,21 +28,12 @@ public class DB_Racas {
                     + "AJ_DISTRIBUTIVO INT,"
                     + "QUANT_STATUS INT)";
         
-        try {
-            Statement s = c.createStatement();
-            s.executeUpdate(sql);
-            s.close();
-            c.close();
-            System.out.println("Tabela RACAS gerada com sucesso.");
-            
-        } catch(Exception e){
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-        }
+        executarUpdate(sql);
+        System.out.println("Tabela RACAS gerada com sucesso.");
+        
     }
     
     public static void inserir(Raca raca){
-        Connection c = connect();
-        
         String sql = "INSERT INTO RACAS VALUES("
                 + "NULL,"
                 + "'" + raca.getNome() + "'"
@@ -67,16 +56,8 @@ public class DB_Racas {
                 + "'" + raca.getAj_distributivo() + "'"
                 + "'" + raca.getQuant_status() + "')";
         
-        try {
-            Statement s = c.createStatement();
-            s.executeUpdate(sql);
-            s.close();
-            c.close();
-            
-            System.out.println("Raca " + raca.getNome() + " cadastrada com sucesso.");
-            
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
+        executarUpdate(sql);
+        System.out.println("Raca " + raca.getNome() + " cadastrada com sucesso.");
+    
     }
 }

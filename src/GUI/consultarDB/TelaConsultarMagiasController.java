@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import static database.DB_Magias.consultar;
+import static database.TABLE_Magias.consultar;
 import static database.Database.queryConsulta;
 
 public class TelaConsultarMagiasController implements Initializable {

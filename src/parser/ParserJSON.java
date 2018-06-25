@@ -3,8 +3,8 @@ package parser;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
-import database.DB_Magias;
-import database.DB_Racas;
+import database.TABLE_Magias;
+import database.TABLE_Racas;
 import java.io.FileReader;
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class ParserJSON{
         ArrayList<Magia> magias = new Gson().fromJson(reader, new TypeToken<ArrayList<Magia>>() {}.getType());
         
         for(Magia magia : magias){
-            DB_Magias.inserir(magia);
+            TABLE_Magias.inserir(magia);
         }
     }
     
@@ -23,7 +23,7 @@ public class ParserJSON{
         ArrayList<Raca> racas = new Gson().fromJson(reader, new TypeToken<ArrayList<Raca>>() {}.getType());
         
         for (Raca raca : racas){
-            DB_Racas.inserir(raca);
+            TABLE_Racas.inserir(raca);
         }
     }
 }

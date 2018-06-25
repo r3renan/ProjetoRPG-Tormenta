@@ -6,9 +6,9 @@ import static database.Database.connect;
 import static database.Database.executarUpdate;
 
 
-public class DB_Magias {
+public class TABLE_Magias {
     
-    public static void gerarTableMagias(){
+    public static void gerarTable(){
         String sql = "CREATE TABLE MAGIAS (" +
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "NOME TEXT NOT NULL," +

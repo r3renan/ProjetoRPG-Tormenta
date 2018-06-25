@@ -4,9 +4,9 @@ import static database.Database.connect;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class DB_Classes {
+public class TABLE_Classes {
     
-    public static void gerarTableClasses(){
+    public static void gerarTable(){
         Connection c = connect();
         String sql = "CREATE TABLE CLASSES ("
         + "ID INTEGER PRIMARY KEY AUTOINCREMENT)";
