@@ -22,7 +22,7 @@ public class TelaRacasController implements Initializable {
     private ListView<String> lista;
     
     @FXML
-    private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas;
+    private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas, btnSelecionar;
     
     @FXML
     private TextArea textArea;
@@ -31,11 +31,17 @@ public class TelaRacasController implements Initializable {
 
     @FXML
     private void onMouseClick(){
+        textArea.clear();
         String itemSelecionado = lista.getSelectionModel().getSelectedItem();
         raca = consultar("*", "NOME='" + itemSelecionado + "'");
         
         nome.setText(raca.getNome());
         resumo.setText(raca.getResumo());
+    }
+    
+    @FXML
+    private void selecionarRaca(){
+        String itemSelecionado = lista.getSelectionModel().getSelectedItem();
     }
     
     @FXML

@@ -1,18 +1,17 @@
 package database;
 
-import static database.Database.connect;
-import java.sql.*;
+import static database.Database.executarUpdate;
+
 
 public class TABLE_Fichas {
     
     public static void gerarTable(){
-        Connection c = connect();
         String sql = "CREATE TABLE FICHAS (" +
                             "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                             "ID_RACA INTEGER," +
                             "ID_CLASSE INTEGER," +
-                            "NOME TEXT NOT NULL," +
-                            "NIVEL INTEGER NOT NULL," +
+                            "NOME TEXT," +
+                            "NIVEL INTEGER," +
                             "FORCA INTEGER," +
                             "DESTREZA INTEGER," +
                             "CONSTITUICAO INTEGER," +
@@ -23,15 +22,11 @@ public class TABLE_Fichas {
                             "FOREIGN KEY(ID_CLASSE) REFERENCES CLASSES(ID)" +
                             ")";
         
-        try {
-            Statement s = c.createStatement();
-            s.executeUpdate(sql);
-            s.close();
-            c.close();
-            System.out.println("Tabela FICHAS gerada com sucesso.");
-            
-        } catch ( Exception e ) {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-        }
+        executarUpdate(sql);
+        System.out.println("Tabela FICHAS gerada com sucesso.");
+    }
+    
+    public static void inserir(){
+        
     }
 }

@@ -25,12 +25,14 @@ public class TelaCriarFichaController implements Initializable {
     @FXML
     private TextField campoNome, campoForca, campoDestreza, campoConstituicao, campoInteligencia, campoSabedoria, campoCarisma;
     
+    private int ficha_id;
+    
     @FXML
     public void escolherClasse() throws Exception{
         Stage stage = (Stage) btnClasses.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/selecaoClasse/TelaClasses.fxml"));
         
-        Scene telaEscolherClasse = new Scene(loader.load(), 1000, 720);
+        Scene telaEscolherClasse = new Scene(loader.load(), 1000, 690);
         stage.setScene(telaEscolherClasse);
     }
     
@@ -39,7 +41,7 @@ public class TelaCriarFichaController implements Initializable {
         Stage stage = (Stage) btnRacas.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/selecaoRaca/TelaRacas.fxml"));
         
-        Scene telaEscolherRaca = new Scene(loader.load(), 1000, 720);
+        Scene telaEscolherRaca = new Scene(loader.load(), 1000, 690);
         stage.setScene(telaEscolherRaca);
     }
     
@@ -70,6 +72,7 @@ public class TelaCriarFichaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        //campoForca.setText(TelaInicialController.ficha);
         // TODO
     }    
 }

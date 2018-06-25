@@ -3,8 +3,9 @@ package parser;
 public class Ficha {
     
     private String nome;
-    private String raca;
-    private String classe;
+    private int id_raca;
+    private int id_classe;
+    private int nivel;
     private int forca;
     private int destreza;
     private int constituicao;
@@ -21,8 +22,9 @@ public class Ficha {
     
     public Ficha(){
         nome = null;
-        raca = null;
-        classe = null;
+        id_raca = 0;
+        id_classe = 0;
+        nivel = 0;
         forca = 0;
         destreza = 0;
         constituicao = 0;
@@ -36,6 +38,14 @@ public class Ficha {
         modInteligencia = 0;
         modSabedoria = 0;
         modCarisma = 0;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 
     public int getModForca() {
@@ -94,20 +104,20 @@ public class Ficha {
         this.nome = nome;
     }
 
-    public String getRaca() {
-        return raca;
+    public int getId_raca() {
+        return id_raca;
     }
 
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public void setId_raca(int id_raca) {
+        this.id_raca = id_raca;
     }
 
-    public String getClasse() {
-        return classe;
+    public int getId_classe() {
+        return id_classe;
     }
 
-    public void setClasse(String classe) {
-        this.classe = classe;
+    public void setId_classe(int id_classe) {
+        this.id_classe = id_classe;
     }
 
     public int getForca() {

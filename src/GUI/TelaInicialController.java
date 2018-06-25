@@ -17,13 +17,15 @@ public class TelaInicialController implements Initializable {
     @FXML
     private Button btnCriarFicha, btnConsultaDB, btnCriaDB, btnCarregarFicha;
     
+    private int ficha_id;
+    
     @FXML
     private void telaCriarFicha(ActionEvent event) throws Exception {
         Ficha ficha = new Ficha();
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
-        Scene novaScene = new Scene(loader.load(), 1000, 720);
+        Scene novaScene = new Scene(loader.load(), 1000, 690);
         stage.setScene(novaScene);
     }
     
