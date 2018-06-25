@@ -1,11 +1,8 @@
 package database;
 
-import static database.Database.connect;
 import static database.Database.executarQuery;
 import static database.Database.executarUpdate;
-import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import parser.Raca;
 
 public class TABLE_Racas {
@@ -73,8 +70,11 @@ public class TABLE_Racas {
         Raca raca = null;
         
         try {
-            ResultSet result = executarQuery(sql);;
+            ResultSet result = executarQuery(sql);
             raca = new Raca(result);
+            result.getStatement().close();
+            System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+            result.getStatement().getConnection().close();
             //System.out.println("Nome: " + raca.getNome());
             
         } catch(Exception e) {

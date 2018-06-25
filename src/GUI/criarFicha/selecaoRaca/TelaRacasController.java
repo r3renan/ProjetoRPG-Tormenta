@@ -59,6 +59,10 @@ public class TelaRacasController implements Initializable {
         String sql = "SELECT ID FROM RACAS WHERE NOME='" + raca.getNome() + "'";
         result = executarQuery(sql);
         sql = "UPDATE FICHAS SET ID_RACA=" + result.getInt("ID") + " WHERE ID=" + ficha_id;
+        
+        result.getStatement().close();
+        result.getStatement().getConnection().close();
+        
         executarUpdate(sql);
         
         Stage stage = (Stage) btnSelecionar.getScene().getWindow();

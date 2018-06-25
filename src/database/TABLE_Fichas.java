@@ -1,10 +1,8 @@
 package database;
 
-import static database.Database.connect;
+import static database.Database.executarQuery;
 import static database.Database.executarUpdate;
-import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import parser.Ficha;
 
 
@@ -59,8 +57,7 @@ public class TABLE_Fichas {
         executarUpdate(sql);
     }
     
-    public Ficha consultar(String coluna, String busca){
-        Connection c = connect();
+    public Ficha consultar(String coluna, String busca) throws Exception{
         String sql = "SELECT " + coluna + " FROM FICHAS";
         if (busca != null){
             sql = sql + " WHERE " + busca;
@@ -68,15 +65,9 @@ public class TABLE_Fichas {
         
         Ficha ficha = null;
         
-        try{
-            Statement s = c.createStatement();
-            ResultSet result = s.executeQuery(sql);
-            ficha = new Ficha(result);
-            s.close();
-            c.close();
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
+        ResultSet result = executarQuery(sql);
+        ficha = new Ficha(result);
+        result.getStatement().getConnection().close();
         
         return ficha;
     }

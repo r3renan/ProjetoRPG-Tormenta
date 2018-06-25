@@ -2,6 +2,7 @@ package GUI;
 
 import GUI.criarFicha.TelaCriarFichaController;
 import static database.Database.executarQuery;
+import static database.Database.executarUpdate;
 import database.TABLE_Fichas;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -30,17 +31,11 @@ public class TelaInicialController implements Initializable {
         TABLE_Fichas.inserir(ficha);
     
         ResultSet result = executarQuery("SELECT MAX(ID) FROM FICHAS");
-        //System.out.println(result);
-        //System.out.println("Fora da query: " + result.isClosed());
-        try{
-            //System.out.println("Numero de colunas: " + result.getMetaData().getColumnCount());
-            //System.out.println("Nome da coluna: " + result.getMetaData().getColumnName(1));
-            //System.out.println("Valor da coluna: " + result.getInt("MAX(ID)"));
-            ficha_id = result.getInt("MAX(ID)");
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
-        }
-                
+        ficha_id = result.getInt("MAX(ID)");
+        result.getStatement().close();
+        System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+        result.getStatement().getConnection().close();
+        
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
         
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
@@ -52,6 +47,12 @@ public class TelaInicialController implements Initializable {
         
         Scene novaScene = new Scene(root, 1000, 690);
         stage.setScene(novaScene);
+    }
+    
+    @FXML
+    private void carregarFicha(ActionEvent event) throws Exception{
+        String sql = "UPDATE FICHAS SET NOME='CARLOS' WHERE ID=2";
+        executarUpdate(sql);
     }
     
     @FXML

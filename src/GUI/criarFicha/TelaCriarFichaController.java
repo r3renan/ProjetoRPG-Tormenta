@@ -92,6 +92,10 @@ public class TelaCriarFichaController implements Initializable {
             
         raca.setText(Integer.toString(ficha.getId_raca()));
         classe.setText(Integer.toString(ficha.getId_classe()));
+        
+        result.getStatement().close();
+        System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+        result.getStatement().getConnection().close();
     }
     
     @Override

@@ -14,38 +14,45 @@ public class Database {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         
+        System.out.println("Conexão: " + c);
         return c;
     }
     
     public static void executarUpdate(String sql){
-        Connection c1 = connect();
+        Connection c = connect();
         System.out.println("QUERY UPDATE: " + sql);
         
         try {
-            Statement s1 = c1.createStatement();
-            s1.executeUpdate(sql);
-            s1.close();
-            c1.close();
-            
+            Statement s = c.createStatement();
+            s.executeUpdate(sql);
+            s.close();
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
+        
+        
+        try {
+            System.out.println("Fechando conexão: " + c);
+            c.close();
+        } catch(Exception e){
+            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        }
+        
     }
     
     public static ResultSet executarQuery(String sql){
-        Connection c2 = connect();
-        System.out.println("QUERY: " + sql);
+        Connection c = connect();
+        System.out.println("QUERY BUSCA: " + sql);
         ResultSet result = null;
         
         try {
-            Statement s2 = c2.createStatement();
-            result = s2.executeQuery(sql);
+            Statement s = c.createStatement();
+            result = s.executeQuery(sql);
             //System.out.println("Dentro da query: " + result.isClosed());
             //s2.close();
             //c2.close();
             
         } catch(Exception e){
-            System.out.println("QUERY: " + sql);
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         
@@ -68,6 +75,10 @@ public class Database {
                     saida.add(result.getString(i++));
                 }
             }
+            
+            s.close();
+            System.out.println("Fechando conexão: " + c);
+            c.close();
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
