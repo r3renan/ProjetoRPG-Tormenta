@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.criarFicha.selecaoClasse.TelaClassesController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112" fx:controller="GUI.criarFicha.selecaoClasse.TelaClassesController">
+   <children>
+      <Label layoutX="50.0" layoutY="130.0" text="NÃO TEM NADA AQUI">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button layoutX="82.0" layoutY="296.0" mnemonicParsing="false" text="Voltar" />
+   </children>
 </AnchorPane>

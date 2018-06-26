@@ -14,7 +14,7 @@ public class Database {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         
-        System.out.println("Conexão: " + c);
+        //System.out.println("Conexão: " + c);
         return c;
     }
     
@@ -32,7 +32,7 @@ public class Database {
         
         
         try {
-            System.out.println("Fechando conexão: " + c);
+            //System.out.println("Fechando conexão: " + c);
             c.close();
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
@@ -48,9 +48,6 @@ public class Database {
         try {
             Statement s = c.createStatement();
             result = s.executeQuery(sql);
-            //System.out.println("Dentro da query: " + result.isClosed());
-            //s2.close();
-            //c2.close();
             
         } catch(Exception e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
@@ -62,6 +59,7 @@ public class Database {
     public static ArrayList<String> queryConsulta(String query){
         Connection c = connect();
         ArrayList<String> saida = new ArrayList<>();
+        System.out.println("QUERY: " + query);
         
         try{
             Statement s = c.createStatement();
@@ -77,7 +75,7 @@ public class Database {
             }
             
             s.close();
-            System.out.println("Fechando conexão: " + c);
+            //System.out.println("Fechando conexão: " + c);
             c.close();
             
         } catch(Exception e){

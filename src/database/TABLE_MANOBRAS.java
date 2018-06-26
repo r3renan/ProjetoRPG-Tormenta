@@ -11,7 +11,8 @@ public class TABLE_Manobras {
                 + "NOME TEXT NOT NULL,"
                 + "DESCRICAO TEXT NOT NULL,"
                 + "CLASSE_DIFICULDADE TEXT,"
-                + "FOREIGN KEY(PERICIA_REF) REFERENCES PERICIAS(NOME))";
+                + "FOREIGN KEY(PERICIA_REF) REFERENCES PERICIAS(NOME),"
+                + "CONSTRAINT NOME_UNIQUE UNIQUE(NOME))";
         
         executarUpdate(sql);
     }

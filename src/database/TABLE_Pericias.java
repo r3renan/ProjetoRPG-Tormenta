@@ -11,7 +11,8 @@ public class TABLE_Pericias {
                 + "DESCRICAO TEXT NOT NULL,"
                 + "HABILIDADE_CHAVE TEXT NOT NULL,"
                 + "PENALIDADE_ARMADURA TEXT,"
-                + "TREINADA TEXT)";
+                + "TREINADA TEXT,"
+                + "CONSTRAINT NOME_UNIQUE UNIQUE(NOME))";
         
         executarUpdate(sql);
     }

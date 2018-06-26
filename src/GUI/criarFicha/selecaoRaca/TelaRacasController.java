@@ -30,7 +30,7 @@ public class TelaRacasController implements Initializable {
     private ListView<String> lista;
     
     @FXML
-    private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas, btnSelecionar;
+    private Button btnPersonalidade, btnAventuras, btnNomes, btnAparencia, btnRelacoes, btnReligiao, btnTendencia, btnTerra, btnIdiomas, btnSelecionar, btnHabRacial, btnRetornar;
     
     @FXML
     private TextArea textArea;
@@ -41,7 +41,6 @@ public class TelaRacasController implements Initializable {
     public void setFicha_id(int ficha_id) {
         this.ficha_id = ficha_id;
     }
-    
 
     @FXML
     private void onMouseClick(){
@@ -56,14 +55,26 @@ public class TelaRacasController implements Initializable {
     @FXML
     private void selecionarRaca() throws Exception{
         ResultSet result;
-        String sql = "SELECT ID FROM RACAS WHERE NOME='" + raca.getNome() + "'";
+        String sql = "SELECT * FROM RACAS WHERE NOME='" + raca.getNome() + "'";
         result = executarQuery(sql);
-        sql = "UPDATE FICHAS SET ID_RACA=" + result.getInt("ID") + " WHERE ID=" + ficha_id;
+        String sqlUpdateRaca = "UPDATE FICHAS SET ID_RACA=" + result.getInt("ID") + " WHERE ID=" + ficha_id;
+        String sqlUpdateForca = "UPDATE FICHAS SET MOD_FORCA=" + result.getInt("AJ_FORCA") + " WHERE ID=" + ficha_id;
+        String sqlUpdateDestreza = "UPDATE FICHAS SET MOD_DESTREZA=" + result.getInt("AJ_DESTREZA") + " WHERE ID=" + ficha_id;
+        String sqlUpdateConstituticao = "UPDATE FICHAS SET MOD_CONSTITUICAO=" + result.getInt("AJ_CONSTITUICAO") + " WHERE ID=" + ficha_id;
+        String sqlUpdateInteligencia = "UPDATE FICHAS SET MOD_INTELIGENCIA=" + result.getInt("AJ_INTELIGENCIA") + " WHERE ID=" + ficha_id;
+        String sqlUpdateSabedoria = "UPDATE FICHAS SET MOD_SABEDORIA=" + result.getInt("AJ_SABEDORIA") + " WHERE ID=" + ficha_id;
+        String sqlUpdateCarisma = "UPDATE FICHAS SET MOD_CARISMA=" + result.getInt("AJ_CARISMA") + " WHERE ID =" + ficha_id;
         
         result.getStatement().close();
         result.getStatement().getConnection().close();
-        
-        executarUpdate(sql);
+               
+        executarUpdate(sqlUpdateRaca);
+        executarUpdate(sqlUpdateForca);
+        executarUpdate(sqlUpdateDestreza);
+        executarUpdate(sqlUpdateConstituticao);
+        executarUpdate(sqlUpdateInteligencia);
+        executarUpdate(sqlUpdateSabedoria);
+        executarUpdate(sqlUpdateCarisma);
         
         Stage stage = (Stage) btnSelecionar.getScene().getWindow();
         
@@ -76,6 +87,17 @@ public class TelaRacasController implements Initializable {
         
         Scene novaScene = new Scene(root, 1000, 690);
         stage.setScene(novaScene);
+    }
+    
+    @FXML
+    private void exibirHabilidadeRacial() {
+        textArea.clear();
+        String query = "SELECT TRACO FROM TRACOS_RACIAIS WHERE RACA='" + raca.getNome() + "'";
+        ArrayList<String> tracosRaciais = queryConsulta(query);
+        for (String traco : tracosRaciais){
+            textArea.appendText(traco);
+            textArea.appendText("\n\n");
+        }
     }
     
     @FXML
@@ -130,6 +152,21 @@ public class TelaRacasController implements Initializable {
     private void exibirIdiomas(){
         textArea.clear();
         textArea.setText(raca.getIdiomas());
+    }
+    
+    @FXML
+    private void retornar() throws Exception{
+        Stage stage = (Stage) btnRetornar.getScene().getWindow();
+        
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/criarFicha/TelaCriarFicha.fxml"));
+        Parent root = fxmlloader.load();
+        
+        TelaCriarFichaController controller = fxmlloader.getController();
+        controller.setFicha_id(ficha_id);
+        controller.preencherCampos();
+        
+        Scene novaScene = new Scene(root, 1000, 690);
+        stage.setScene(novaScene);
     }
     
     private void listarRacas(ArrayList<String> racas){ //FUNÇÃO SEM UTILIDADE, ANALISAR E REMOVER OU NÃO ASSIM QUE POSSIVEL

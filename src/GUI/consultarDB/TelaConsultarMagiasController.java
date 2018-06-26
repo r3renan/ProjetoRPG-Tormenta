@@ -16,6 +16,11 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import static database.TABLE_Magias.consultar;
 import static database.Database.queryConsulta;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 public class TelaConsultarMagiasController implements Initializable {
 
@@ -32,10 +37,10 @@ public class TelaConsultarMagiasController implements Initializable {
     private ComboBox boxDominio, boxDescritor, boxNivel, boxTempoExecucao, boxAlcance, boxArea, boxEfeito, boxAlvo, boxDuracao, boxTesteResistencia, boxFonte;
     
     @FXML
-    private Button btnBuscar;
+    private Button btnBuscar, btnVoltar;
     
     @FXML
-    private TextFlow textoDescricao;
+    private TextArea textoDescricao;
     
     @FXML
     private void onMouseClick(){
@@ -89,9 +94,8 @@ public class TelaConsultarMagiasController implements Initializable {
         }
         
         fonte.setText(magia.getFonte());
-        textoDescricao.getChildren().clear();
-        textoDescricao.getChildren().add(new Text(magia.getDescricao()));
-        
+        textoDescricao.clear();
+        textoDescricao.setText(magia.getDescricao());        
     }
     
     @FXML
@@ -182,6 +186,16 @@ public class TelaConsultarMagiasController implements Initializable {
         lista.getItems().clear();
         
         lista.getItems().addAll(nomeMagias);
+    }
+    
+    @FXML
+    public void voltar() throws Exception {
+        Stage stage = (Stage) btnVoltar.getScene().getWindow();
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/GUI/TelaInicial.fxml"));
+        
+        Parent root = fxmlloader.load();
+        Scene novaScene = new Scene(root, 350, 600);
+        stage.setScene(novaScene);
     }
     
     @Override

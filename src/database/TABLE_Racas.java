@@ -28,7 +28,8 @@ public class TABLE_Racas {
                     + "AJ_INTELIGENCIA INTEGER,"
                     + "AJ_CARISMA INTEGER,"
                     + "AJ_DISTRIBUTIVO INTEGER,"
-                    + "QUANT_STATUS INTEGER)";
+                    + "QUANT_STATUS INTEGER,"
+                + "CONSTRAINT NOME_UNIQUE UNIQUE(NOME))";
         
         executarUpdate(sql);
     }
@@ -73,7 +74,7 @@ public class TABLE_Racas {
             ResultSet result = executarQuery(sql);
             raca = new Raca(result);
             result.getStatement().close();
-            System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+            //System.out.println("Fechando conexão: " + result.getStatement().getConnection());
             result.getStatement().getConnection().close();
             //System.out.println("Nome: " + raca.getNome());
             

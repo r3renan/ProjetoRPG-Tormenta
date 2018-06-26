@@ -1210,7 +1210,7 @@
 {
  "nome": "Contingência",
  "nivel": "Arcana 6 (essência)",
- "tempoExecucao": "10 minutos mais o tempoExecucao da magia latente (veja texto)",
+ "tempoExecucao": "10 minutos mais o tempo de execução da magia latente",
  "alcance": "Pessoal",
  "alvo": "Você",
  "duracao": "1 dia ou até ser descarregada",

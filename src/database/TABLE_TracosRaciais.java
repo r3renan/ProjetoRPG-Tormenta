@@ -10,7 +10,8 @@ public class TABLE_TracosRaciais {
                 + "ID INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + "RACA TEXT NOT NULL,"
                 + "TRACO TEXT NOT NULL,"
-                + "FOREIGN KEY(RACA) REFERENCES RACAS(NOME))";
+                + "FOREIGN KEY(RACA) REFERENCES RACAS(NOME),"
+                + "CONSTRAINT TRACO_UNIQUE UNIQUE(TRACO))";
         
         executarUpdate(sql);
     }

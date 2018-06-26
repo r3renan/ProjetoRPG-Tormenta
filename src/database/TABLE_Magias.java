@@ -21,7 +21,8 @@ public class TABLE_Magias {
                             "DURACAO TEXT," +
                             "TESTE_RESISTENCIA TEXT," +
                             "FONTE TEXT," +
-                            "DESCRICAO TEXT)";
+                            "DESCRICAO TEXT,"
+                + "CONSTRAINT NOME_UNIQUE UNIQUE(NOME))";
         
         executarUpdate(sql);
     }
@@ -51,6 +52,7 @@ public class TABLE_Magias {
         if (busca != null){
             sql = sql + " WHERE " + busca;
         }
+        System.out.println("QUERY: " + sql);
         
         Magia magia = null;
         
@@ -58,7 +60,6 @@ public class TABLE_Magias {
             Statement s = c.createStatement();
             ResultSet result = s.executeQuery(sql);
             magia = new Magia(result);
-            System.out.println("Nome: " + magia.getNome());
             s.close();
             c.close();
             

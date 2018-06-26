@@ -81,8 +81,13 @@ public class TelaCriarFichaController implements Initializable {
     
     public void preencherCampos() throws Exception{
         String sql = "SELECT * FROM FICHAS WHERE ID=" + ficha_id;
-        ResultSet result = executarQuery(sql);
+        ResultSet result;
+        result = executarQuery(sql);
         ficha = new Ficha(result);
+        result.getStatement().close();
+        //System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+        result.getStatement().getConnection().close();
+        
         campoForca.setText(Integer.toString(ficha.getForca()));
         campoDestreza.setText(Integer.toString(ficha.getDestreza()));
         campoConstituicao.setText(Integer.toString(ficha.getConstituicao()));
@@ -90,29 +95,32 @@ public class TelaCriarFichaController implements Initializable {
         campoSabedoria.setText(Integer.toString(ficha.getSabedoria()));
         campoCarisma.setText(Integer.toString(ficha.getCarisma()));
             
-        ResultSet result2;
         if (ficha.getId_raca() != 0){
-            result2 = executarQuery("SELECT NOME FROM RACAS WHERE ID=" + ficha.getId_raca());
-            raca.setText(result2.getString("NOME"));
-            result2.getStatement().close();
-            System.out.println("Fechando conexão: " + result.getStatement().getConnection());
-            result2.getStatement().getConnection().close();
+            result = executarQuery("SELECT NOME FROM RACAS WHERE ID=" + ficha.getId_raca());
+            raca.setText(result.getString("NOME"));
+            result.getStatement().close();
+            //System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+            result.getStatement().getConnection().close();
         } else {
             raca.setText("NÃO ESCOLHIDO");
         }
         if (ficha.getId_classe() != 0){
-            result2 = executarQuery("SELECT NOME FROM CLASSES WHERE ID=" + ficha.getId_classe());
-            classe.setText(result2.getString("NOME"));
-            result2.getStatement().close();
-            System.out.println("Fechando conexão: " + result.getStatement().getConnection());
-            result2.getStatement().getConnection().close();
+            result = executarQuery("SELECT NOME FROM CLASSES WHERE ID=" + ficha.getId_classe());
+            classe.setText(result.getString("NOME"));
+            result.getStatement().close();
+            //System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+            result.getStatement().getConnection().close();
         } else {
             classe.setText("NÃO ESCOLHIDO");
         }
         
-        result.getStatement().close();
-        System.out.println("Fechando conexão: " + result.getStatement().getConnection());
-        result.getStatement().getConnection().close();
+        modForca.setText(Integer.toString(ficha.getModForca()));
+        modDestreza.setText(Integer.toString(ficha.getModDestreza()));
+        modConstituicao.setText(Integer.toString(ficha.getModConstituicao()));
+        modInteligencia.setText(Integer.toString(ficha.getModInteligencia()));
+        modSabedoria.setText(Integer.toString(ficha.getModSabedoria()));
+        modCarisma.setText(Integer.toString(ficha.getModCarisma()));
+        
     }
     
     @Override

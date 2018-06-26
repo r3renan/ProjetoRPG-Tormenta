@@ -2,7 +2,6 @@ package GUI;
 
 import GUI.criarFicha.TelaCriarFichaController;
 import static database.Database.executarQuery;
-import static database.Database.executarUpdate;
 import database.TABLE_Fichas;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -33,7 +32,7 @@ public class TelaInicialController implements Initializable {
         ResultSet result = executarQuery("SELECT MAX(ID) FROM FICHAS");
         ficha_id = result.getInt("MAX(ID)");
         result.getStatement().close();
-        System.out.println("Fechando conexão: " + result.getStatement().getConnection());
+        //System.out.println("Fechando conexão: " + result.getStatement().getConnection());
         result.getStatement().getConnection().close();
         
         Stage stage = (Stage) btnCriarFicha.getScene().getWindow();
@@ -51,8 +50,8 @@ public class TelaInicialController implements Initializable {
     
     @FXML
     private void carregarFicha(ActionEvent event) throws Exception{
-        String sql = "UPDATE FICHAS SET NOME='CARLOS' WHERE ID=2";
-        executarUpdate(sql);
+        /*String sql = "UPDATE FICHAS SET NOME='CARLOS' WHERE ID=2";
+        executarUpdate(sql);*/
     }
     
     @FXML
