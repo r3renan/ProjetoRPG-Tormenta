@@ -1,8 +1,5 @@
 package GUI.criarFicha.selecaoRaca;
 
-import GUI.criarFicha.TelaCriarFichaController;
-import static database.Database.executarQuery;
-import static database.Database.executarUpdate;
 import static database.Database.queryConsulta;
 import java.net.URL;
 import java.util.ArrayList;
@@ -10,16 +7,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
-import parser.Raca;
-import static database.TABLE_Racas.consultar;
-import java.sql.ResultSet;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
 
 public class TelaHabilidadesRaciais implements Initializable {
 

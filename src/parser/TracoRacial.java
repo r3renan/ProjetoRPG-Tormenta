@@ -36,6 +36,4 @@ public class TracoRacial {
     public void setTraco(String traco) {
         this.traco = traco;
     }
-    
-    
 }
