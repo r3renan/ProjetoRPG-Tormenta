@@ -2,6 +2,8 @@ package database;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Database {
     
@@ -10,8 +12,8 @@ public class Database {
         try {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:Tormenta.db");
-        } catch (Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        } catch (ClassNotFoundException | SQLException e){
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, e);
         }
         
         //System.out.println("Conexão: " + c);
@@ -26,16 +28,16 @@ public class Database {
             Statement s = c.createStatement();
             s.executeUpdate(sql);
             s.close();
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        } catch(SQLException e){
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, e);
         }
         
         
         try {
             //System.out.println("Fechando conexão: " + c);
             c.close();
-        } catch(Exception e){
-            System.err.println(e.getClass().getName() + ": " + e.getMessage());
+        } catch(SQLException e){
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, e);
         }
         
     }
