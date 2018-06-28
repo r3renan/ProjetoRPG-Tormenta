@@ -12,8 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import static database.TABLE_Magias.consultar;
 import static database.Database.queryConsulta;
 import javafx.fxml.FXMLLoader;

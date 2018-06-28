@@ -51,7 +51,7 @@ public class Database {
             Statement s = c.createStatement();
             result = s.executeQuery(sql);
             
-        } catch(Exception e){
+        } catch(SQLException e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         
@@ -80,7 +80,7 @@ public class Database {
             //System.out.println("Fechando conexão: " + c);
             c.close();
             
-        } catch(Exception e){
+        } catch(SQLException e){
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
         }
         return saida;
