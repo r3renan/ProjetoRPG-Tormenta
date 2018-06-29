@@ -8,7 +8,7 @@ O software também poderá ser usado como um grimório de simples consulta, de a
 
 Por fim, a ficha gerada poderá ser convertida em um arquivo PDF que estará pronto para ser impresso e utilizado em jogo sem nenhuma modificação adicional necessária. Também poderá ser exportado em um arquivo XML importável em outra instância do programa, ou mesmo indexado numa plataforma online.
 
-Tracklist:
+###Tracklist:\n
 Concluído:
 - Magias (Manual Básico)
 - Perícias (Manual Básico)
