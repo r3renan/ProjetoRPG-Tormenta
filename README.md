@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/renanramos97/ProjetoRPG-Tormenta.svg?branch=master](https://travis-ci.org/renanramos97/ProjetoRPG-Tormenta)
+[![Build Status](https://travis-ci.org/renanramos97/ProjetoRPG-Tormenta.svg?branch=master)](https://travis-ci.org/renanramos97/ProjetoRPG-Tormenta)
 
 # Projeto RPG - Sistema Tormenta
 
